@@ -16,6 +16,7 @@
     <link href="app/css/datepicker.min.css" rel="stylesheet">
     <link href="app/css/jquery.dm-uploader.min.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="app/css/jquery.datetimepicker.css" rel="stylesheet">
     <link href="app/main.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="/favicon.png"/>
 </head>
@@ -813,12 +814,13 @@
                 </span>
             </label>
         </div>
-        <div class="form-add__item">
+        <div class="form-add__item form-add__item_date">
             <div class="form-add__label">
                 <div class="form-add__label-text"></div>
                 <div class="add-input-wrapper">
                     <div class="add-date-text">
-                        Желаемая дата выполнения задачи <input type="text" class="custom-datapicker" name="desired_date">
+                        Желаемая дата выполнения задачи <input type="text" value="Привет" class="add-date-input input-width-buffer custom-datapicker" name="desired_date">
+                        <div class="input-buffer"></div>
                     </div>
                 </div>
             </div>
@@ -915,6 +917,7 @@
 <script src="app/js/datepicker.min.js"></script>
 <script src="app/js/jquery.dm-uploader.min.js"></script>
 <script src="app/js/jquery.animateNumber.min.js"></script>
+<script src="app/js/jquery.datetimepicker.full.min.js"></script>
 <script src="app/js/main.js"></script>
 </body>
 </html>

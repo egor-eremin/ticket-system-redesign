@@ -5646,3 +5646,22 @@ thead {
     border: none;
     display: inline;
 }
+.add-date-input {
+    color: #186ca6;
+    line-height: 20px;
+    border-bottom: 1px dashed rgba(24,108,166,.3);
+    padding-bottom: 0;
+    cursor: pointer;
+    transition: border-color .3s ease, color .3s ease;
+}
+.add-date-input:hover {
+    border-bottom-color: rgba(24,108,166,.6);
+}
+.add-date-input:focus {
+    color: #8cc63f;
+    border-bottom: 1px dashed rgba(140,198,63,.3);
+    outline: none;
+}
+.form-add__item_date {
+    margin-top: 21px !important;
+}
