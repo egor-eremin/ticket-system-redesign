@@ -530,7 +530,6 @@ $(document).ready(function () {
         $(document).on('click', '.tabbed-time__edit', function () {
             var thisTime = $(this).parents('.tabbed-time__item').find('.tabbed-time__hours');
             var massTime = thisTime.text().split(':');
-            console.log(massTime[0]);
             $('.hour-input').val($.trim(+massTime[0]));
             $('.minutes-input').val($.trim(+massTime[1]));
             $('.second-input').val($.trim(+massTime[2]));
@@ -777,54 +776,67 @@ $(document).ready(function () {
             },
             callbacks: {
                open: function () {
-                   var inputValue = $('.input-width-buffer').val();
-                   var $buffer = $('.input-buffer');
-                   var $input = $('.input-width-buffer');
-                   var $customDatapicker = $('.custom-datapicker');
-
-                   initWidthDefault();
-                   initDatapicker($customDatapicker);
-
-                   function initWidthDefault() {
-                       $buffer.text(inputValue);
-                       $input.width($buffer.width());
-                       getWidth(".input-width-buffer");
-                   }
+                   // var inputValue = $('.input-width-buffer').val();
+                   // var $buffer = $('.input-buffer');
+                   // var $input = $('.input-width-buffer');
+                   // var $customDatapicker = $('.custom-datapicker');
+                   //
+                   // initWidthDefault();
+                   //
+                   //
+                   // function initWidthDefault() {
+                   //     $buffer.text(inputValue);
+                   //     $input.width($buffer.width());
+                   //     getWidth(".input-width-buffer");
+                   // }
                }
             },
             mainClass: 'custom-popup'
         });
     })();
-    (function addWidthAuto() {
-        var inputValue;
-        var $buffer = $('.input-buffer');
-        var $input = $('.input-width-buffer');
+    // (function addWidthAuto() {
+    //
+    //     var $buffer = $('.input-buffer');
+    //     var $input = $('.input-width-buffer');
+    //
+    //     $input.on('change', function() {
+    //         var inputValue;
+    //         inputValue = $('.input-width-buffer').val();
+    //         $buffer.text(inputValue);
+    //         $input.width($buffer.width());
+    //     });
+    // })();
 
-        $input.on('change', function() {
-            inputValue = $('.input-width-buffer').val();
-            $buffer.text(inputValue);
-            $input.width($buffer.width());
-        });
-    })();
-    (function addDateDefault() {
-        var date = new Date();
-        var options = {
-            month: 'long',
-            day: 'numeric',
-        };
+    // (function addDateDefault() {
+    //     var date = new Date();
+    //     var options = {
+    //         month: 'long',
+    //         day: 'numeric',
+    //     };
+    //
+    //     $('.custom-datapicker').val(date.toLocaleString("ru", options));
+    // })();
 
-        $('.custom-datapicker').val(date.toLocaleString("ru", options));
-    })();
-
-    function initDatapicker(element) {
-        $(element).datetimepicker({
-            startDate:new Date(),
-            format: 'd m',
+    (function initDatapicker() {
+        $(".custom-datapicker").datetimepicker({
+            format: 'd M Y',
+            timepicker:false,
+            minDate:0,
+            validateOnBlur: false,
+            onSelectDate: function (ct,$i) {
+                var date = ct;
+                var options = {
+                    month: 'long',
+                    day: 'numeric',
+                };
+                $('.add-date-input').val(date.toLocaleString("ru", options));
+                console.log(date.toLocaleString("ru", options));
+            },
 
         });
 
         $.datetimepicker.setLocale('ru');
-    };
+    }) ();
     function getWidth(element) {
         return $(element).width();
     }
