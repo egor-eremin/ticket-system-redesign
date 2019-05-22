@@ -5646,22 +5646,171 @@ thead {
     border: none;
     display: inline;
 }
-.add-date-input {
+.pseudo-date-input {
     color: #186ca6;
     line-height: 20px;
     border-bottom: 1px dashed rgba(24,108,166,.3);
     padding-bottom: 0;
     cursor: pointer;
     transition: border-color .3s ease, color .3s ease;
+    position: relative;
 }
-.add-date-input:hover {
+.add-date-input {
+    color: transparent;
+    /*visibility: hidden;*/
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pseudo-date-input:hover {
     border-bottom-color: rgba(24,108,166,.6);
 }
-.add-date-input:focus {
+.pseudo-date-input:focus {
     color: #8cc63f;
     border-bottom: 1px dashed rgba(140,198,63,.3);
     outline: none;
 }
 .form-add__item_date {
     margin-top: 21px !important;
+}
+/*datapicker*/
+/*.xdsoft_noselect {*/
+    /*display: block !important;*/
+    /*left: 50% !important;*/
+    /*top: 50% !important;*/
+    /*transform: translate(-50%, -50%);*/
+/*}*/
+/*datapicker*/
+.cool-datapicker {
+    width: 250px;
+    padding: 0;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 1px 12px 0 rgba(25, 24, 42, 0.3);
+    background-color: #ffffff;
+}
+.cool-datapicker .xdsoft_datepicker {
+    width: 100%;
+    margin: 0;
+}
+.cool-datapicker .xdsoft_month {
+    pointer-events: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    color: #2e2e2e;
+    font-weight: 400;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 0;
+}
+.cool-datapicker .xdsoft_month i {
+    display: none;
+}
+.cool-datapicker .xdsoft_year {
+    display: none;
+}
+.cool-datapicker .xdsoft_next,
+.cool-datapicker .xdsoft_prev {
+    background-image: url("../../images/arrow_c.svg");
+    background-position: center;
+    height: 100%;
+    transition: .3s ease;
+}
+.cool-datapicker .xdsoft_next {
+    margin-right: 7px;
+}
+.cool-datapicker .xdsoft_prev {
+    transform: rotate(180deg);
+    margin-left: 7px;
+}
+.cool-datapicker .xdsoft_monthpicker {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cool-datapicker .xdsoft_today_button {
+    height: 100%;
+    display: none;
+}
+.cool-datapicker .xdsoft_calendar thead {
+    border: none;
+}
+.cool-datapicker .xdsoft_calendar thead th {
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    text-align: center;
+    color: #2e2e2e;
+    padding: 0;
+    border: none;
+    text-transform: lowercase;
+    height: 32px;
+    padding: 0;
+}
+.cool-datapicker .xdsoft_calendar td {
+    border: none;
+    height: 28px;
+    background: #ffffff;
+    align-items: center;
+    vertical-align: middle;
+}
+.cool-datapicker .xdsoft_calendar td div {
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    color: #2e2e2e;
+    padding: 0;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    transition: .3s ease;
+    border-radius: 2px;
+}
+.cool-datapicker .xdsoft_calendar td:hover {
+    background: #ffffff !important;
+}
+.cool-datapicker .xdsoft_calendar td:not(.xdsoft_disabled):hover div {
+    background-color: #edf0f3;
+}
+.cool-datapicker .xdsoft_calendar td.xdsoft_current {
+    background: #ffffff !important;
+    box-shadow: none !important;
+}
+.cool-datapicker .xdsoft_calendar td.xdsoft_current:not(.xdsoft_disabled) div {
+    background-color: #186ca6;
+    color: #ffffff;
+}
+.cool-datapicker .xdsoft_calendar td.xdsoft_current div {
+    font-weight: 400;
+}
+.cool-datapicker .xdsoft_calendar td.xdsoft_other_month div {
+    display: none;
+}
+.cool-datapicker .xdsoft_calendar td.xdsoft_disabled.xdsoft_current {
+    background: #ffffff;
+    box-shadow: none;
+}
+.cool-datapicker .xdsoft_calendar td.xdsoft_disabled.xdsoft_current div {
+    font-weight: 400;
+    color: #2e2e2e;
+    box-shadow: none;
+}
+.cool-datapicker .xdsoft_calendar td.xdsoft_disabled.xdsoft_current:hover {
+    background: #ffffff !important;
+}
+.cool-datapicker .xdsoft_calendar tr:first-child td {
+    padding-top: 13px;
+    height: 41px;
+}
+.cool-datapicker .xdsoft_calendar tr:last-child td {
+    padding-bottom: 15px;
+    height: 43px;
 }

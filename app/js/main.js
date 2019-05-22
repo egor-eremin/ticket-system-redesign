@@ -776,52 +776,54 @@ $(document).ready(function () {
             },
             callbacks: {
                open: function () {
-                   // var inputValue = $('.input-width-buffer').val();
-                   // var $buffer = $('.input-buffer');
-                   // var $input = $('.input-width-buffer');
-                   // var $customDatapicker = $('.custom-datapicker');
-                   //
-                   // initWidthDefault();
-                   //
-                   //
-                   // function initWidthDefault() {
-                   //     $buffer.text(inputValue);
-                   //     $input.width($buffer.width());
-                   //     getWidth(".input-width-buffer");
-                   // }
+                   var inputValue = $('.input-width-buffer').val();
+                   var $buffer = $('.input-buffer');
+                   var $input = $('.input-width-buffer');
+                   var $customDatapicker = $('.custom-datapicker');
+
+                   initWidthDefault();
+
+
+                   function initWidthDefault() {
+                       $buffer.text(inputValue);
+                       $input.width($buffer.width());
+                       getWidth(".input-width-buffer");
+                   }
                }
             },
             mainClass: 'custom-popup'
         });
     })();
-    // (function addWidthAuto() {
-    //
-    //     var $buffer = $('.input-buffer');
-    //     var $input = $('.input-width-buffer');
-    //
-    //     $input.on('change', function() {
-    //         var inputValue;
-    //         inputValue = $('.input-width-buffer').val();
-    //         $buffer.text(inputValue);
-    //         $input.width($buffer.width());
-    //     });
-    // })();
+    (function addWidthAuto() {
 
-    // (function addDateDefault() {
-    //     var date = new Date();
-    //     var options = {
-    //         month: 'long',
-    //         day: 'numeric',
-    //     };
-    //
-    //     $('.custom-datapicker').val(date.toLocaleString("ru", options));
-    // })();
+        var $buffer = $('.input-buffer');
+        var $input = $('.input-width-buffer');
+
+        $input.on('change', function() {
+            var inputValue;
+            inputValue = $('.input-width-buffer').val();
+            $buffer.text(inputValue);
+            $input.width($buffer.width());
+        });
+    })();
+
+    (function addDateDefault() {
+        var date = new Date();
+        var options = {
+            month: 'long',
+            day: 'numeric',
+        };
+
+        $('.custom-datapicker').val(date.toLocaleString("ru", options));
+    })();
 
     (function initDatapicker() {
         $(".custom-datapicker").datetimepicker({
             format: 'd M Y',
             timepicker:false,
             minDate:0,
+            todayButton: false,
+            className: 'cool-datapicker',
             validateOnBlur: false,
             onSelectDate: function (ct,$i) {
                 var date = ct;
@@ -830,8 +832,10 @@ $(document).ready(function () {
                     day: 'numeric',
                 };
                 $('.add-date-input').val(date.toLocaleString("ru", options));
-                console.log(date.toLocaleString("ru", options));
             },
+            onShow: function (ct,$i) {
+                console.log(ct);
+            }
 
         });
 
