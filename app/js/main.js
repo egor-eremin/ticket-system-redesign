@@ -777,17 +777,16 @@ $(document).ready(function () {
             callbacks: {
                open: function () {
                    var inputValue = $('.input-width-buffer').val();
-                   var $buffer = $('.input-buffer');
+                   var $buffer = $('.pseudo-date-input__wrapper');
                    var $input = $('.input-width-buffer');
-                   var $customDatapicker = $('.custom-datapicker');
 
                    initWidthDefault();
 
 
                    function initWidthDefault() {
-                       $buffer.text(inputValue);
+                       // $buffer.text(inputValue);
                        $input.width($buffer.width());
-                       getWidth(".input-width-buffer");
+                       // getWidth(".input-width-buffer");
                    }
                }
             },
@@ -796,25 +795,16 @@ $(document).ready(function () {
     })();
     (function addWidthAuto() {
 
-        var $buffer = $('.input-buffer');
+        var $buffer = $('.pseudo-date-input__wrapper');
         var $input = $('.input-width-buffer');
 
         $input.on('change', function() {
-            var inputValue;
-            inputValue = $('.input-width-buffer').val();
-            $buffer.text(inputValue);
             $input.width($buffer.width());
         });
     })();
 
     (function addDateDefault() {
-        var date = new Date();
-        var options = {
-            month: 'long',
-            day: 'numeric',
-        };
-
-        $('.custom-datapicker').val(date.toLocaleString("ru", options));
+        displayDate(new Date(), '.pseudo-date-input__wrapper');
     })();
 
     (function initDatapicker() {
@@ -826,25 +816,129 @@ $(document).ready(function () {
             className: 'cool-datapicker',
             validateOnBlur: false,
             onSelectDate: function (ct,$i) {
-                var date = ct;
-                var options = {
-                    month: 'long',
-                    day: 'numeric',
-                };
-                $('.add-date-input').val(date.toLocaleString("ru", options));
+                displayDate(ct, '.pseudo-date-input__wrapper');
             },
-            onShow: function (ct,$i) {
-                console.log(ct);
+            onClose: function (ct,$i) {
+                displayDate(ct, '.pseudo-date-input__wrapper');
             }
-
         });
 
         $.datetimepicker.setLocale('ru');
-    }) ();
+    })();
+    (function addFocusClass() {
+       $('.input-width-buffer').on('focus', function () {
+          $(this).addClass('focus-on');
+       });
+    })();
+    (function removeFocusClass() {
+        $('.input-width-buffer').on('blur', function () {
+           $(this).removeClass('focus-on');
+        });
+    })();
+    (function initCustomInputFile() {
+        $('.custome-add-file').dmUploader({
+            url: 'backend/upload.php',
+            maxFileSize: 3000000,
+            dnd: false,
+            onDragEnter: function(){
+                // Happens when dragging something over the DnD area
+                this.addClass('active');
+            },
+            onDragLeave: function(){
+                // Happens when dragging something OUT of the DnD area
+                this.removeClass('active');
+            },
+            onInit: function(){
+                // Plugin is ready to use
+                ui_add_log('Penguin initialized :)', 'info');
+            },
+            onComplete: function(){
+                // All files in the queue are processed (success or error)
+                ui_add_log('All pending tranfers finished');
+            },
+            onNewFile: function(id, file){
+                // When a new file is added using the file selector or the DnD area
+                ui_add_log('New file added #' + id);
+                ui_multi_add_file(id, file);
+            },
+            onBeforeUpload: function(id){
+                // about tho start uploading a file
+                ui_add_log('Starting the upload of #' + id);
+                ui_multi_update_file_status(id, 'uploading', 'Uploading...');
+                ui_multi_update_file_progress(id, 0, '', true);
+            },
+            onUploadCanceled: function(id) {
+                // Happens when a file is directly canceled by the user.
+                ui_multi_update_file_status(id, 'warning', 'Canceled by User');
+                ui_multi_update_file_progress(id, 0, 'warning', false);
+            },
+            onUploadProgress: function(id, percent){
+                // Updating file progress
+                ui_multi_update_file_progress(id, percent);
+            },
+        });
+    })();
+
+    function displayDate(currentDate, elem) {
+        var date = currentDate;
+        var options = {
+            month: 'long',
+            day: 'numeric',
+        };
+        var convertDay = date.toLocaleString("ru", options);
+        var arrDay = convertDay.split(' ');
+        var newMonth = arrDay[1];
+
+        arrDay[1] = newMonth.slice(0,3);
+        arrDay = arrDay.join(' ');
+        $(elem).text(arrDay);
+
+    };
     function getWidth(element) {
         return $(element).width();
+    };
+
+// Creates a new file and add it to our list
+    function ui_multi_add_file(id, file){
+        var template = $('#files-template').text();
+        template = template.replace('%%filename%%', file.name);
+
+        template = $(template);
+        template.prop('id', 'uploaderFile' + id);
+        template.data('file-id', id);
+
+        $('#files').find('li.empty').fadeOut(); // remove the 'no files yet'
+        $('#files').prepend(template);
     }
 
+// Changes the status messages on our list
+    function ui_multi_update_file_status(id, status, message)
+    {
+        $('#uploaderFile' + id).find('span').html(message).prop('class', 'status text-' + status);
+    }
+
+// Updates a file progress, depending on the parameters it may animate it or change the color.
+    function ui_multi_update_file_progress(id, percent, color, active)
+    {
+        color = (typeof color === 'undefined' ? false : color);
+        active = (typeof active === 'undefined' ? true : active);
+
+        var bar = $('#uploaderFile' + id).find('div.progress-bar');
+
+        bar.width(percent + '%').attr('aria-valuenow', percent);
+        bar.toggleClass('progress-bar-striped progress-bar-animated', active);
+
+        if (percent === 0){
+            bar.html('');
+        } else {
+            bar.html(percent + '%');
+        }
+
+        if (color !== false){
+            bar.removeClass('bg-success bg-info bg-warning bg-danger');
+            bar.addClass('bg-' + color);
+        }
+    }
 });
 
 

@@ -5646,7 +5646,7 @@ thead {
     border: none;
     display: inline;
 }
-.pseudo-date-input {
+.pseudo-date-input__wrapper {
     color: #186ca6;
     line-height: 20px;
     border-bottom: 1px dashed rgba(24,108,166,.3);
@@ -5655,13 +5655,23 @@ thead {
     transition: border-color .3s ease, color .3s ease;
     position: relative;
 }
+.pseudo-date-input {
+    position: relative;
+}
+.add-date-input.focus-on + .pseudo-date-input__wrapper {
+    color: #8cc63f;
+    border-bottom-color: #8cc63f !important;
+}
 .add-date-input {
     color: transparent;
-    /*visibility: hidden;*/
+    z-index: 1;
     background: transparent;
     position: absolute;
     top: 0;
     left: 0;
+}
+.add-date-input:focus {
+    outline: none;
 }
 .pseudo-date-input:hover {
     border-bottom-color: rgba(24,108,166,.6);
@@ -5674,14 +5684,6 @@ thead {
 .form-add__item_date {
     margin-top: 21px !important;
 }
-/*datapicker*/
-/*.xdsoft_noselect {*/
-    /*display: block !important;*/
-    /*left: 50% !important;*/
-    /*top: 50% !important;*/
-    /*transform: translate(-50%, -50%);*/
-/*}*/
-/*datapicker*/
 .cool-datapicker {
     width: 250px;
     padding: 0;

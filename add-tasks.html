@@ -819,8 +819,7 @@
                 <div class="form-add__label-text"></div>
                 <div class="add-input-wrapper">
                     <div class="add-date-text">
-                        Желаемая дата выполнения задачи <span class="pseudo-date-input">22 мая<input type="text" class="add-date-input input-width-buffer custom-datapicker" name="desired_date"></span>
-                        <div class="input-buffer"></div>
+                        Желаемая дата выполнения задачи <span class="pseudo-date-input"><input type="text" class="add-date-input input-width-buffer custom-datapicker" name="desired_date"><span class="pseudo-date-input__wrapper"></span></span>
                     </div>
                 </div>
             </div>
@@ -829,8 +828,10 @@
             <div class="form-add__label">
                 <div class="form-add__label-text"></div>
                 <div class="add-input-wrapper">
-                    <input type="file" name="FILE" id="add-file">
-                    <label for="add-file" class="input-file-custom"></label>
+                    <div class="custome-add-file">
+                        <input type="file" name="FILE" id="add-file">
+                        <label for="add-file" class="input-file-custom"></label>
+                    </div>
                 </div>
             </div>
         </div>
