@@ -463,12 +463,12 @@ $(document).ready(function () {
         }, false);
     })();
     (function animateAfterAjax() {
-        $( document ).ajaxSend(function() {
-            $('.preloder').addClass('animated');
-        });
-        $( document ).ajaxStop(function() {
-            $('.preloder').removeClass('animated');
-        });
+        // $( document ).ajaxSend(function() {
+        //     $('.preloder').addClass('animated');
+        // });
+        // $( document ).ajaxStop(function() {
+        //     $('.preloder').removeClass('animated');
+        // });
     })();
     (function showNoticeMenu() {
         $('.notice').on('click', function () {
@@ -482,12 +482,13 @@ $(document).ready(function () {
            $('.notice').removeClass('active');
         });
     })();
-    $( document ).ajaxSend(function() {
-        $('.preloder').addClass('animated');
-    });
-    $( document ).ajaxStop(function() {
-        $('.preloder').removeClass('animated');
-    });
+
+    // $( document ).ajaxSend(function() {
+    //     $('.preloder').addClass('animated');
+    // });
+    // $( document ).ajaxStop(function() {
+    //     $('.preloder').removeClass('animated');
+    // });
     (function addPopupEditTicket() {
         $(document).on('click', '.ticket__edit', function () {
             if ($(this).hasClass('open-popup')) {
@@ -838,43 +839,32 @@ $(document).ready(function () {
     (function initCustomInputFile() {
         $('.custome-add-file').dmUploader({
             url: 'backend/upload.php',
-            maxFileSize: 3000000,
+            maxFileSize: 300000000000000000,
             dnd: false,
-            onDragEnter: function(){
-                // Happens when dragging something over the DnD area
-                this.addClass('active');
-            },
-            onDragLeave: function(){
-                // Happens when dragging something OUT of the DnD area
-                this.removeClass('active');
-            },
-            onInit: function(){
-                // Plugin is ready to use
-                ui_add_log('Penguin initialized :)', 'info');
-            },
-            onComplete: function(){
-                // All files in the queue are processed (success or error)
-                ui_add_log('All pending tranfers finished');
-            },
             onNewFile: function(id, file){
                 // When a new file is added using the file selector or the DnD area
-                ui_add_log('New file added #' + id);
                 ui_multi_add_file(id, file);
             },
             onBeforeUpload: function(id){
+                showElement('.download-progress');
                 // about tho start uploading a file
-                ui_add_log('Starting the upload of #' + id);
-                ui_multi_update_file_status(id, 'uploading', 'Uploading...');
-                ui_multi_update_file_progress(id, 0, '', true);
+                // ui_multi_update_file_status(id, 'uploading', 'Uploading...');
+                // ui_multi_update_file_progress(id, 0, '', true);
             },
             onUploadCanceled: function(id) {
+
                 // Happens when a file is directly canceled by the user.
-                ui_multi_update_file_status(id, 'warning', 'Canceled by User');
-                ui_multi_update_file_progress(id, 0, 'warning', false);
+                // ui_multi_update_file_status(id, 'warning', 'Canceled by User');
+                // ui_multi_update_file_progress(id, 0, 'warning', false);
             },
             onUploadProgress: function(id, percent){
+
                 // Updating file progress
-                ui_multi_update_file_progress(id, percent);
+                // ui_multi_update_file_progress(id, percent);
+            },
+            onComplete: function () {
+                hideFile('.download-progress');
+                showElement('.uploaded-files');
             },
         });
     })();
@@ -900,20 +890,32 @@ $(document).ready(function () {
 
 // Creates a new file and add it to our list
     function ui_multi_add_file(id, file){
-        var template = $('#files-template').text();
-        template = template.replace('%%filename%%', file.name);
+        // var template = $('#files-template').text();
+        // template = template.replace('%%filename%%', file.name);
+        //
+        // template = $(template);
+        // template.prop('id', 'uploaderFile' + id);
+        // template.data('file-id', id);
+        //
+        // $('#files').find('li.empty').fadeOut(); // remove the 'no files yet'
+        // $('#files').prepend(template);
+        $('<li class="files-list__item"><div class="file-text">' + file.name + '</div><div class="file-close"></div></li>').appendTo('.files-list__items');
+        console.log(file.name);
+    };
+    function cutNameFile() {
 
-        template = $(template);
-        template.prop('id', 'uploaderFile' + id);
-        template.data('file-id', id);
-
-        $('#files').find('li.empty').fadeOut(); // remove the 'no files yet'
-        $('#files').prepend(template);
-    }
+    };
+    function showElement(element) {
+      $(element).css({opacity: 0, display: 'flex'}).animate({
+          opacity: 1
+      }, 300);
+    };
+    function hideFile(element) {
+        $(element).hide();
+    };
 
 // Changes the status messages on our list
-    function ui_multi_update_file_status(id, status, message)
-    {
+    function ui_multi_update_file_status(id, status, message) {
         $('#uploaderFile' + id).find('span').html(message).prop('class', 'status text-' + status);
     }
 

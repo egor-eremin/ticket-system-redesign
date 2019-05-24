@@ -5610,7 +5610,7 @@ thead {
     border-top: none;
 }
 .form-add__item + .form-add__item {
-    margin-top: 31px;
+    margin-top: 30px;
 }
 .input-form {
     width: 100%;
@@ -5815,4 +5815,117 @@ thead {
 .cool-datapicker .xdsoft_calendar tr:last-child td {
     padding-bottom: 15px;
     height: 43px;
+}
+.add-file-input {
+    position: absolute;
+    z-index: -1px;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+.input-file-custom {
+    color: #4e5664;
+    line-height: 1.43;
+    font-size: 14px;
+    padding: 5px 14px 7px;
+    border-radius: 2px;
+    border: solid 1px #c6cedb;
+    background-image: linear-gradient(to bottom, #ffffff, #f1f1f1);
+    cursor: pointer;
+    transition: .3s ease;
+    display: inline-block;
+}
+.input-file-custom:hover, .input-file-custom:focus {
+    background-image: linear-gradient(to bottom, #ffffff, #e7ecf9);
+}
+.input-file-custom:active {
+    box-shadow: inset 0 1px 2px 0 rgba(79, 89, 101, 0.5);
+    background-color: #fbfbfd;
+}
+.input-file-wrapper {
+    display: flex;
+    align-items: center;
+}
+.download-progress__text, .download-status__text {
+    font-size: 14px;
+    line-height: 1.43;
+    color: #6c7481;
+}
+.download-status__text {
+    border-bottom: 1px dashed rgba(108,116,129,.3);
+    transition: .3s ease;
+    cursor: pointer;
+}
+.download-status__text:hover {
+    border-bottom-color: rgba(108,116,129,.6);
+}
+.uploaded-files {
+    display: none;
+}
+.upload-ray2 {
+    opacity: .3;
+}
+.upload-ray3 {
+    opacity: .4;
+}
+.upload-ray4 {
+    opacity: .5;
+}
+.upload-ray5 {
+    opacity: .9;
+}
+.upload-ray6 {
+    opacity: .8;
+}
+.upload-ray7 {
+    opacity: .7;
+}
+.upload-ray8 {
+    opacity: .6;
+}
+.upload-svg {
+    animation: animationUploadFiles 1.1s step-start infinite;
+}
+.download-progress {
+    /*display: flex;*/
+    align-items: center;
+    display: none;
+}
+.download-status {
+    margin-left: 26px;
+}
+.download-progress__text {
+    margin-left: 12px;
+}
+.custome-add-file {
+    flex-shrink: 0;
+}
+@keyframes animationUploadFiles {
+    0% {
+        transform: rotate(0deg);
+    }
+    12.5% {
+        transform: rotate(45deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    37.5% {
+        transform: rotate(135deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    62.5% {
+        transform: rotate(225deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    87.5% {
+        transform: rotate(315deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
