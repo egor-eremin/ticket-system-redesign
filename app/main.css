@@ -3399,7 +3399,8 @@ table.general-information__item-params td + td {
     position: fixed;
     width: 100%;
     height: 100%;
-    display: flex;
+    /*display: flex;*/
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -5852,14 +5853,37 @@ thead {
     color: #6c7481;
 }
 .download-status__text {
+    position: relative;
+}
+.download-status-text {
     border-bottom: 1px dashed rgba(108,116,129,.3);
     transition: .3s ease;
-    cursor: pointer;
+    position: relative;
+    cursor: default;
 }
-.download-status__text:hover {
+.download-status-text:hover {
     border-bottom-color: rgba(108,116,129,.6);
 }
+.download-status__text:hover .files-list-wrapper {
+    opacity: 1;
+    visibility: visible;
+}
+.files-list-wrapper {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+.files-list {
+    background: #ffffff;
+    box-shadow: 0 1px 8px 0 rgba(25, 24, 42, 0.3);
+    border-radius: 4px;
+    position: relative;
+    width: 280px;
+    height: 105px;
+    padding: 17px 0 17px 16px;
+}
 .uploaded-files {
+    margin-left: 24px;
     display: none;
 }
 .upload-ray2 {
@@ -5887,18 +5911,116 @@ thead {
     animation: animationUploadFiles 1.1s step-start infinite;
 }
 .download-progress {
-    /*display: flex;*/
     align-items: center;
+    margin-left: 26px;
     display: none;
 }
 .download-status {
-    margin-left: 26px;
+    /*margin-left: 26px;*/
 }
 .download-progress__text {
     margin-left: 12px;
 }
 .custome-add-file {
     flex-shrink: 0;
+}
+.files-list-wrapper {
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+    position: absolute;
+    padding-bottom: 15px;
+    z-index: 3;
+}
+.download-status__icon {
+    margin-right: 12px;
+    position: relative;
+}
+.files-list__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-right: 44px;
+    z-index: 2;
+}
+.files-list::before, .files-list::after {
+    content: '';
+    width: 11px;
+    height: 11px;
+    background: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,50%) rotate(45deg);
+    box-shadow: 0 1px 8px 0 rgba(25, 24, 42, 0.3);
+    z-index: -1;
+}
+.files-list::after {
+    box-shadow: none;
+    z-index: 3;
+}
+.file-text {
+    font-size: 14px;
+    line-height: 1.43;
+    color: #6c7481;
+    transition: .3s ease;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.files-list__item {
+    display: flex;
+    align-items: center;
+}
+.files-list__item:hover .file-text{
+    color: #2e2e2e;
+}
+.close-file path {
+    fill: #e6473a;
+}
+.file-close {
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.files-list__item:hover .file-close {
+    opacity: 1;
+    visibility: visible;
+}
+.files-list__item + .files-list__item {
+    margin-top: 10px;
+}
+.files-list__items {
+    overflow: hidden;
+}
+.quantity-files {
+    position: absolute;
+    font-size: 10px;
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1;
+    background-color: #e6473a;
+    padding: 2px 4px;
+    border-radius: 8px;
+    top: 0;
+    right: 0;
+    transform: translate(7px, -6px);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.quantity-files.active {
+    display: flex;
+}
+.quantity-files span {
+    position: relative;
+    top: -1px;
+}
+.download-status__icon svg {
+    position: relative;
+    z-index: 2;
 }
 @keyframes animationUploadFiles {
     0% {

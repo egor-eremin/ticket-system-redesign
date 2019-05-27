@@ -842,30 +842,30 @@ $(document).ready(function () {
             maxFileSize: 300000000000000000,
             dnd: false,
             onNewFile: function(id, file){
-                // When a new file is added using the file selector or the DnD area
                 ui_multi_add_file(id, file);
             },
             onBeforeUpload: function(id){
+                hideFile('.uploaded-files');
                 showElement('.download-progress');
-                // about tho start uploading a file
-                // ui_multi_update_file_status(id, 'uploading', 'Uploading...');
-                // ui_multi_update_file_progress(id, 0, '', true);
-            },
-            onUploadCanceled: function(id) {
-
-                // Happens when a file is directly canceled by the user.
-                // ui_multi_update_file_status(id, 'warning', 'Canceled by User');
-                // ui_multi_update_file_progress(id, 0, 'warning', false);
-            },
-            onUploadProgress: function(id, percent){
-
-                // Updating file progress
-                // ui_multi_update_file_progress(id, percent);
             },
             onComplete: function () {
                 hideFile('.download-progress');
+                declension();
+                quantityFiles();
                 showElement('.uploaded-files');
             },
+        });
+    })();
+    (function removesFiles() {
+        $(document).on('click', '.file-close', function () {
+            var thisItem = $(this).parent('.files-list__item');
+
+            thisItem.slideUp(300);
+            setTimeout(function () {
+                thisItem.remove();
+                declension();
+                quantityFiles();
+            }, 350);
         });
     })();
 
@@ -884,33 +884,73 @@ $(document).ready(function () {
         $(elem).text(arrDay);
 
     };
-    function getWidth(element) {
-        return $(element).width();
-    };
 
 // Creates a new file and add it to our list
     function ui_multi_add_file(id, file){
-        // var template = $('#files-template').text();
-        // template = template.replace('%%filename%%', file.name);
-        //
-        // template = $(template);
-        // template.prop('id', 'uploaderFile' + id);
-        // template.data('file-id', id);
-        //
-        // $('#files').find('li.empty').fadeOut(); // remove the 'no files yet'
-        // $('#files').prepend(template);
-        $('<li class="files-list__item"><div class="file-text">' + file.name + '</div><div class="file-close"></div></li>').appendTo('.files-list__items');
-        console.log(file.name);
+        textResult = cutNameFile(file);
+        $('<li class="files-list__item"><div class="file-text">' + textResult + '</div><div class="file-close"><svg class="close-file" width="8px" height="8px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n' +
+            '    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->\n' +
+            '    <title>Combined Shape</title>\n' +
+            '    <desc>Created with Sketch.</desc>\n' +
+            '    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">\n' +
+            '        <g transform="translate(-333.000000, -200.000000)" fill="#6D6D72">\n' +
+            '            <g transform="translate(16.000000, 184.000000)">\n' +
+            '                <g transform="translate(317.000000, 16.000000)">\n' +
+            '                    <path d="M4.74264069,3.32842712 L7.9246212,0.146446609 C8.11988335,-0.0488155365 8.43646584,-0.0488155365 8.63172798,0.146446609 L9.33883476,0.853553391 C9.53409691,1.04881554 9.53409691,1.36539803 9.33883476,1.56066017 L6.15685425,4.74264069 L9.33883476,7.9246212 C9.53409691,8.11988335 9.53409691,8.43646584 9.33883476,8.63172798 L8.63172798,9.33883476 C8.43646584,9.53409691 8.11988335,9.53409691 7.9246212,9.33883476 L4.74264069,6.15685425 L1.56066017,9.33883476 C1.36539803,9.53409691 1.04881554,9.53409691 0.853553391,9.33883476 L0.146446609,8.63172798 C-0.0488155365,8.43646584 -0.0488155365,8.11988335 0.146446609,7.9246212 L3.32842712,4.74264069 L0.146446609,1.56066017 C-0.0488155365,1.36539803 -0.0488155365,1.04881554 0.146446609,0.853553391 L0.853553391,0.146446609 C1.04881554,-0.0488155365 1.36539803,-0.0488155365 1.56066017,0.146446609 L4.74264069,3.32842712 Z" id="Combined-Shape"></path>\n' +
+            '                </g>\n' +
+            '            </g>\n' +
+            '        </g>\n' +
+            '    </g>\n' +
+            '</svg></div></li>').appendTo('.files-list__items');
     };
-    function cutNameFile() {
+    function cutNameFile(file) {
+        var nameFile = file.name;
+        var textBeforePointArr;
+        var textAfterPointArr;
+        var textBeforePoint;
+        var textAfterPoint;
+        var arrText = nameFile.split('.');
 
+        textAfterPointArr = arrText.splice(1, arrText.length - 1);
+        textBeforePointArr = arrText.splice(arrText.length - 1);
+
+        textBeforePoint = textBeforePointArr.join('');
+        textAfterPoint = textAfterPointArr.join('');
+
+        if (textBeforePoint.length > 18) {
+            textBeforePoint = textBeforePoint.slice(0, 18) + '... ';
+        };
+
+        return textBeforePoint + textAfterPoint;
+    };
+    function declension() {
+        if ($('.files-list__item').length > 1) {
+            $('.download-status-text').text('Загружены');
+        } else {
+            $('.download-status-text').text('Загружен');
+        };
+    };
+    function quantityFiles() {
+        var quantityFiles = $('.files-list__item').length;
+        if (quantityFiles > 1) {
+            $('.quantity-files').addClass('active');
+            $('.quantity-files').html('<span>' + quantityFiles + '</span>');
+        } else {
+            $('.quantity-files').removeClass('active');
+        }
     };
     function showElement(element) {
-      $(element).css({opacity: 0, display: 'flex'}).animate({
-          opacity: 1
-      }, 300);
+        if (!$(element).hasClass('animateShow')) {
+            $(element).addClass('animateShow');
+            $(element).css({opacity: 0, display: 'flex'}).animate({
+                opacity: 1
+            }, 300);
+        }
     };
     function hideFile(element) {
+        if ($(element).hasClass('animateShow')) {
+            $(element).removeClass('animateShow');
+        };
         $(element).hide();
     };
 
