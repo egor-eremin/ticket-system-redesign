@@ -5967,6 +5967,7 @@ thead {
     transition: .3s ease;
     flex-shrink: 0;
     overflow: hidden;
+    margin-right: 10px;
 }
 .files-list__item {
     display: flex;
@@ -5979,7 +5980,6 @@ thead {
     fill: #e6473a;
 }
 .file-close {
-    margin-left: 10px;
     cursor: pointer;
     transition: .3s ease;
     opacity: 0;
@@ -5989,8 +5989,8 @@ thead {
     opacity: 1;
     visibility: visible;
 }
-.files-list__item + .files-list__item {
-    margin-top: 10px;
+.files-list__item:not(:last-child) {
+    margin-bottom: 10px;
 }
 .files-list__items {
     overflow: hidden;
@@ -6021,6 +6021,92 @@ thead {
 .download-status__icon svg {
     position: relative;
     z-index: 2;
+}
+.close-upload {
+    fill: #e6473a;
+}
+.btn_add-ticket {
+    padding: 10px 34px 14px;
+    cursor: pointer;
+}
+.btn_add-ticket_not-active {
+    border: solid 1px #d5dae3;
+    background-color: #d5dae3;
+    font-weight: 600;
+    text-shadow: none;
+    color: rgba(46,46,46,.6);
+    cursor: not-allowed;
+    padding: 9px 34px 13px;
+}
+.btn_add-ticket_not-active:hover {
+    background-color: #d5dae3;
+}
+.btn_add-ticket_not-active:active {
+    background-color: #d5dae3;
+    box-shadow: none;
+}
+.form-add__item_create-ticket {
+    margin-top: 42px !important;
+}
+.check-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #126096;
+    border-radius: 2px;
+    width: 18px;
+    height: 18px;
+    position: relative;
+}
+.check-mark::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .3s ease;
+    background: #186ca6 url("../images/check.svg") no-repeat center;
+    background-size: 12px 10px;
+}
+.check-mark-svg {
+    opacity: 0;
+    transition: .3s ease;
+}
+.new-custom-checkbox__input {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.new-custom-checkbox__text {
+    font-size: 14px;
+    line-height: 20px;
+    position: absolute;
+    left: 32px;
+    top: -2px;
+    width: calc(100% + 4px);
+}
+.new-custom-checkbox {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+}
+.form-add__item_agreement {
+    margin-top: 23px !important;
+}
+.agreement-link {
+    transition: .3s ease;
+    border-bottom: 1px solid rgba(46,46,46,.3);
+}
+.agreement-link:hover {
+    border-bottom-color: rgba(46,46,46,.6);
+}
+.new-custom-checkbox__input:checked ~ .check-mark::before {
+    opacity: 1;
 }
 @keyframes animationUploadFiles {
     0% {

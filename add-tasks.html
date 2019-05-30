@@ -899,24 +899,42 @@
                 </div>
             </div>
         </div>
-        <div class="form-add__item">
+        <div class="form-add__item form-add__item_create-ticket">
             <div class="form-add__label">
                 <div class="form-add__label-text"></div>
                 <div class="add-input-wrapper">
-                    <button class="btn btn_add-ticket">
+                    <button class="btn btn_add-ticket btn_add-ticket_not-active">
                         Создать задачу
                     </button>
                 </div>
             </div>
         </div>
-        <div class="form-add__item">
+        <div class="form-add__item form-add__item_agreement">
             <div class="form-add__label">
                 <div class="form-add__label-text"></div>
                 <div class="add-input-wrapper">
                     <label class="new-custom-checkbox">
-                        <input type="checkbox" class="new-custom-checkbox__input" name="agreement">
-                        <span>
-                            Я соглашаюсь с <a href="/how-made/#work-client" target="_blank">
+                        <input type="checkbox" checked class="new-custom-checkbox__input" name="agreement">
+                        <span class="check-mark">
+                            <svg class="check-mark-svg" width="12px" height="10px" viewBox="0 0 12 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+                                <title>Shape</title>
+                                <desc>Created with Sketch.</desc>
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-497.000000, -758.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                                        <g transform="translate(360.000000, 120.000000)">
+                                            <g transform="translate(135.000000, 633.000000)">
+                                                <g transform="translate(0.000000, 2.000000)">
+                                                    <path d="M12.3025936,3 C10.417261,5.0414597 8.24713365,7.38052123 6.28699799,9.50033014 L3.69141115,7.1922869 L2,9.00809601 L5.59438078,12.2447749 L6.43682377,13 L7.21061407,12.1638579 C9.3384875,9.85934257 11.8681328,7.13600093 14,4.82738576 L12.3025936,3 Z" id="Shape"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </span>
+                        <span class="new-custom-checkbox__text">
+                            Я соглашаюсь с <a class="agreement-link" href="/how-made/#work-client" target="_blank">
                                 принципами командной работы
                             </a>
                         </span>

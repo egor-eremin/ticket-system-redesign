@@ -865,7 +865,13 @@ $(document).ready(function () {
                 thisItem.remove();
                 declension();
                 quantityFiles();
+                if ($('.files-list__item').length == 0) {
+                    $('.uploaded-files').removeClass('.animateShow');
+                    $('.uploaded-files').fadeOut(300);
+                }
             }, 350);
+
+
         });
     })();
 
@@ -888,19 +894,20 @@ $(document).ready(function () {
 // Creates a new file and add it to our list
     function ui_multi_add_file(id, file){
         textResult = cutNameFile(file);
-        $('<li class="files-list__item"><div class="file-text">' + textResult + '</div><div class="file-close"><svg class="close-file" width="8px" height="8px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n' +
-            '    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->\n' +
-            '    <title>Combined Shape</title>\n' +
-            '    <desc>Created with Sketch.</desc>\n' +
-            '    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">\n' +
-            '        <g transform="translate(-333.000000, -200.000000)" fill="#6D6D72">\n' +
-            '            <g transform="translate(16.000000, 184.000000)">\n' +
-            '                <g transform="translate(317.000000, 16.000000)">\n' +
-            '                    <path d="M4.74264069,3.32842712 L7.9246212,0.146446609 C8.11988335,-0.0488155365 8.43646584,-0.0488155365 8.63172798,0.146446609 L9.33883476,0.853553391 C9.53409691,1.04881554 9.53409691,1.36539803 9.33883476,1.56066017 L6.15685425,4.74264069 L9.33883476,7.9246212 C9.53409691,8.11988335 9.53409691,8.43646584 9.33883476,8.63172798 L8.63172798,9.33883476 C8.43646584,9.53409691 8.11988335,9.53409691 7.9246212,9.33883476 L4.74264069,6.15685425 L1.56066017,9.33883476 C1.36539803,9.53409691 1.04881554,9.53409691 0.853553391,9.33883476 L0.146446609,8.63172798 C-0.0488155365,8.43646584 -0.0488155365,8.11988335 0.146446609,7.9246212 L3.32842712,4.74264069 L0.146446609,1.56066017 C-0.0488155365,1.36539803 -0.0488155365,1.04881554 0.146446609,0.853553391 L0.853553391,0.146446609 C1.04881554,-0.0488155365 1.36539803,-0.0488155365 1.56066017,0.146446609 L4.74264069,3.32842712 Z" id="Combined-Shape"></path>\n' +
-            '                </g>\n' +
-            '            </g>\n' +
-            '        </g>\n' +
-            '    </g>\n' +
+        $('<li class="files-list__item"><div class="file-text">' + textResult + '</div><div class="file-close"><svg version="1.1" width="8" height="8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n' +
+            '\t viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">\n' +
+            '<style type="text/css">\n' +
+            '\t.st0{fill:#6D6D72;}\n' +
+            '</style>\n' +
+            '\t<g transform="translate(-894.000000, -136.000000)">\n' +
+            '\t\t<g  transform="translate(360.000000, 120.000000)">\n' +
+            '\t\t\t<g transform="translate(534.000000, 16.000000)">\n' +
+            '\t\t\t\t<path class="close-upload" d="M4,2.8l2.7-2.7C6.8,0,7.1,0,7.3,0.1l0.6,0.6C8,0.9,8,1.2,7.9,1.3L5.2,4l2.7,2.7\n' +
+            '\t\t\t\t\tC8,6.8,8,7.1,7.9,7.3L7.3,7.9C7.1,8,6.8,8,6.7,7.9L4,5.2L1.3,7.9C1.2,8,0.9,8,0.7,7.9L0.1,7.3C0,7.1,0,6.8,0.1,6.7L2.8,4\n' +
+            '\t\t\t\t\tL0.1,1.3C0,1.2,0,0.9,0.1,0.7l0.6-0.6C0.9,0,1.2,0,1.3,0.1L4,2.8z"/>\n' +
+            '\t\t\t</g>\n' +
+            '\t\t</g>\n' +
+            '\t</g>\n' +
             '</svg></div></li>').appendTo('.files-list__items');
     };
     function cutNameFile(file) {
@@ -939,6 +946,7 @@ $(document).ready(function () {
             $('.quantity-files').removeClass('active');
         }
     };
+
     function showElement(element) {
         if (!$(element).hasClass('animateShow')) {
             $(element).addClass('animateShow');
