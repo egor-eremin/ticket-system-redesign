@@ -805,6 +805,7 @@ $(document).ready(function () {
     })();
 
     (function addDateDefault() {
+        addDateInHiddenInput(new Date());
         displayDate(new Date(), '.pseudo-date-input__wrapper');
     })();
 
@@ -821,6 +822,7 @@ $(document).ready(function () {
             },
             onClose: function (ct,$i) {
                 displayDate(ct, '.pseudo-date-input__wrapper');
+                addDateInHiddenInput(ct);
             }
         });
 
@@ -946,7 +948,6 @@ $(document).ready(function () {
             $('.quantity-files').removeClass('active');
         }
     };
-
     function showElement(element) {
         if (!$(element).hasClass('animateShow')) {
             $(element).addClass('animateShow');
@@ -961,6 +962,15 @@ $(document).ready(function () {
         };
         $(element).hide();
     };
+    function addDateInHiddenInput(curDate) {
+        var currentDate = curDate;
+        var day =  (('' + currentDate.getDate()).length < 2) ? ('0' + currentDate.getDate()) : currentDate.getDate();
+        var month = (('' + (currentDate.getMonth() + 1)).length < 2) ? ('0' + (currentDate.getMonth() + 1)) : (currentDate.getMonth() + 1);
+        var year = currentDate.getFullYear();
+
+        $('.date-to-server').val(day + '.' + month + '.' + year);
+
+    }
 
 // Changes the status messages on our list
     function ui_multi_update_file_status(id, status, message) {

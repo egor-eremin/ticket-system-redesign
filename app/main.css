@@ -5693,6 +5693,14 @@ thead {
     box-shadow: 0 1px 12px 0 rgba(25, 24, 42, 0.3);
     background-color: #ffffff;
 }
+.cool-datapicker tbody tr td:first-child,
+.cool-datapicker thead tr th:first-child {
+    padding-left: 11px;
+}
+.cool-datapicker tbody tr td:last-child,
+.cool-datapicker thead tr th:last-child {
+    padding-right: 11px;
+}
 .cool-datapicker .xdsoft_datepicker {
     width: 100%;
     margin: 0;
@@ -5870,8 +5878,8 @@ thead {
 }
 .files-list-wrapper {
     top: 0;
-    left: 50%;
-    transform: translate(-50%, -100%);
+    left: -103px;
+    transform: translate(0, -100%);
 }
 .files-list {
     background: #ffffff;
@@ -6031,7 +6039,7 @@ thead {
 }
 .btn_add-ticket_not-active {
     border: solid 1px #d5dae3;
-    background-color: #d5dae3;
+    background-color: #f1f3f7;
     font-weight: 600;
     text-shadow: none;
     color: rgba(46,46,46,.6);
@@ -6039,7 +6047,7 @@ thead {
     padding: 9px 34px 13px;
 }
 .btn_add-ticket_not-active:hover {
-    background-color: #d5dae3;
+    background-color: #f1f3f7;
 }
 .btn_add-ticket_not-active:active {
     background-color: #d5dae3;
@@ -6057,6 +6065,7 @@ thead {
     width: 18px;
     height: 18px;
     position: relative;
+    cursor: pointer;
 }
 .check-mark::before {
     content: '';
