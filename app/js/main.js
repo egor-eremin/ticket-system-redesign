@@ -895,8 +895,15 @@ $(document).ready(function () {
     (function validationAddTicketForm() {
         $('.form-add').validate({
             invalidHandler: function(event, validator) {
-                console.log(validator);
-                console.log(validator.currentForm);
+                let topic = $('.topic-input');
+                let description = $('.description-input');
+                let privacyPolicy = $('.privacy-input');
+                setTimeout(function () {
+                    if (topic.hasClass('error') && description.hasClass('error')) {
+
+                    }
+                    console.log(topic.hasClass('error'));
+                }, 100);
             }
         });
     })();
