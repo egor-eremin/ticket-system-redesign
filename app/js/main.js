@@ -892,7 +892,8 @@ $(document).ready(function () {
     };
 
 // Creates a new file and add it to our list
-    function ui_multi_add_file(id, file){
+    function
+    ui_multi_add_file(id, file){
         textResult = cutNameFile(file);
         $('<li class="files-list__item"><div class="file-text">' + textResult + '</div><div class="file-close"><svg version="1.1" width="8" height="8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n' +
             '\t viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">\n' +
