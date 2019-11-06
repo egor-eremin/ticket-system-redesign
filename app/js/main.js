@@ -769,31 +769,32 @@ $(document).ready(function () {
            }
         });
     })();
-    (function initedTicketPopup() {
-        $('.create-task').magnificPopup({
-            items: {
-                src: '.add-popup',
-                type: 'inline'
-            },
-            callbacks: {
-               open: function () {
-                   var inputValue = $('.input-width-buffer').val();
-                   var $buffer = $('.pseudo-date-input__wrapper');
-                   var $input = $('.input-width-buffer');
 
-                   initWidthDefault();
-
-
-                   function initWidthDefault() {
-                       // $buffer.text(inputValue);
-                       $input.width($buffer.width());
-                       // getWidth(".input-width-buffer");
-                   }
-               }
-            },
-            mainClass: 'custom-popup'
-        });
-    })();
+    // (function initedTicketPopup() {
+    //     $('.create-task').magnificPopup({
+    //         items: {
+    //             src: '.add-popup',
+    //             type: 'inline'
+    //         },
+    //         callbacks: {
+    //            open: function () {
+    //                var inputValue = $('.input-width-buffer').val();
+    //                var $buffer = $('.pseudo-date-input__wrapper');
+    //                var $input = $('.input-width-buffer');
+    //
+    //                initWidthDefault();
+    //
+    //
+    //                function initWidthDefault() {
+    //                    // $buffer.text(inputValue);
+    //                    $input.width($buffer.width());
+    //                    // getWidth(".input-width-buffer");
+    //                }
+    //            }
+    //         },
+    //         mainClass: 'custom-popup'
+    //     });
+    // })();
     (function addWidthAuto() {
 
         var $buffer = $('.pseudo-date-input__wrapper');
@@ -807,6 +808,17 @@ $(document).ready(function () {
     (function addDateDefault() {
         addDateInHiddenInput(new Date());
         displayDate(new Date(), '.pseudo-date-input__wrapper');
+
+        var inputValue = $('.input-width-buffer').val();
+        var $buffer = $('.pseudo-date-input__wrapper');
+        var $input = $('.input-width-buffer');
+
+        initWidthDefault();
+
+
+        function initWidthDefault() {
+            $input.width($buffer.width());
+        }
     })();
 
     (function initDatapicker() {
@@ -817,12 +829,16 @@ $(document).ready(function () {
             todayButton: false,
             className: 'cool-datapicker',
             validateOnBlur: false,
+            onShow: function (ct,$i) {
+                $i.addClass('open-datapicker');
+            },
             onSelectDate: function (ct,$i) {
                 displayDate(ct, '.pseudo-date-input__wrapper');
             },
             onClose: function (ct,$i) {
                 displayDate(ct, '.pseudo-date-input__wrapper');
                 addDateInHiddenInput(ct);
+                $i.removeClass('open-datapicker');
             }
         });
 
@@ -876,6 +892,14 @@ $(document).ready(function () {
 
         });
     })();
+    (function validationAddTicketForm() {
+        $('.form-add').validate({
+            invalidHandler: function(event, validator) {
+                console.log(validator);
+                console.log(validator.currentForm);
+            }
+        });
+    })();
 
     function displayDate(currentDate, elem) {
         var date = currentDate;
@@ -894,8 +918,7 @@ $(document).ready(function () {
     };
 
 // Creates a new file and add it to our list
-    function
-    ui_multi_add_file(id, file){
+    function ui_multi_add_file(id, file){
         textResult = cutNameFile(file);
         $('<li class="files-list__item"><div class="file-text">' + textResult + '</div><div class="file-close"><svg version="1.1" width="8" height="8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n' +
             '\t viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">\n' +
@@ -931,7 +954,7 @@ $(document).ready(function () {
             textBeforePoint = textBeforePoint.slice(0, 18) + '... ';
         };
 
-        return textBeforePoint + textAfterPoint;
+        return textBeforePoint + '.' + textAfterPoint;
     };
     function declension() {
         if ($('.files-list__item').length > 1) {
@@ -942,6 +965,7 @@ $(document).ready(function () {
     };
     function quantityFiles() {
         var quantityFiles = $('.files-list__item').length;
+
         if (quantityFiles > 1) {
             $('.quantity-files').addClass('active');
             $('.quantity-files').html('<span>' + quantityFiles + '</span>');

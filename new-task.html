@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=1280">
+    <title>MegaMirIt Тикетная система</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700|Roboto+Slab:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="app/css/animate.css" rel="stylesheet">
+    <link href="app/css/magnific-popup.css" rel="stylesheet">
+    <link href="app/css/font-awesome.min.css" rel="stylesheet">
+    <link href="app/css/gray.min.css" rel="stylesheet">
+    <link href="app/css/slick.css" rel="stylesheet">
+    <link href="app/css/tooltipster.bundle.css" rel="stylesheet">
+    <link href="app/css/select2.css" rel="stylesheet">
+    <link href="app/css/datepicker.min.css" rel="stylesheet">
+    <link href="app/css/jquery.dm-uploader.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="app/css/jquery.datetimepicker.css" rel="stylesheet">
+    <link href="app/main.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+</head>
+<body>
+<header class="header hedaer-main">
+    <div class="header-time">
+        <div class="header-time__item">
+            <div class="header-time__operation-mode header-time__text">
+                В будни с 9:00 до 18:00 МСК +5
+            </div>
+        </div>
+        <div class="header-time__item">
+            <a href="http://test.support-mmit.ru/how-made/" class="how-we-work">
+                Как мы работаем
+            </a>
+        </div>
+    </div>
+    <div class="template-wrapper header__wrapper">
+        <div class="header__col">
+            <a href="http://test.support-mmit.ru/service/" class="main-logo">
+                <svg class="main-logo__svg" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 106 25.6" style="enable-background:new 0 0 106 25.6;" xml:space="preserve">
+    <style type="text/css">
+        .st0 {
+            fill: #FFFFFF;
+        }
+    </style>
+                    <path class="st0" d="M6.8,12.5c0-1.3-0.2-2.2-0.4-2.7C6,9.2,5.5,8.9,4.6,8.9c-0.3,0-0.7,0-1,0C3.2,9,2.9,9.1,2.8,9.1v9.7H0V7.2
+        C0.6,7,1.2,6.9,2.1,6.8C3,6.6,3.9,6.6,4.8,6.6c0.9,0,1.5,0.1,2,0.3s0.9,0.5,1.3,0.9c0.2-0.1,0.4-0.3,0.7-0.4C9.2,7.2,9.4,7.1,9.8,7
+        c0.3-0.1,0.7-0.2,1-0.3c0.3-0.1,0.7-0.1,1.1-0.1c0.9,0,1.7,0.1,2.3,0.4c0.6,0.3,1.1,0.7,1.4,1.1c0.3,0.5,0.6,1.1,0.7,1.7
+        c0.1,0.7,0.2,1.4,0.2,2.2v6.8h-2.8v-6.3c0-1.3-0.2-2.2-0.4-2.7c-0.3-0.6-0.9-0.9-1.8-0.9c-0.4,0-0.9,0-1.3,0.2
+        C9.9,9.2,9.5,9.4,9.4,9.5c0.1,0.4,0.2,0.8,0.3,1.2c0,0.4,0,0.9,0,1.4v6.6H6.9v-6.3H6.8z M17.1,12.9c0-1.1,0.2-2,0.4-2.8
+        c0.3-0.8,0.7-1.4,1.3-2c0.5-0.6,1.1-0.9,1.8-1.1c0.7-0.3,1.4-0.4,2-0.4c1.7,0,2.9,0.5,3.9,1.5c0.9,1,1.4,2.6,1.4,4.6v0.5
+        c0,0.2,0,0.4,0,0.5h-8c0,0.9,0.4,1.7,1,2.2c0.6,0.6,1.5,0.8,2.6,0.8c0.7,0,1.3,0,1.8-0.2c0.6-0.1,1-0.3,1.3-0.4l0.4,2.3
+        c-0.2,0-0.4,0.2-0.6,0.2c-0.3,0.1-0.6,0.2-0.9,0.2c-0.3,0-0.7,0.1-1.1,0.2s-0.8,0-1.2,0c-1.1,0-2-0.2-2.8-0.4
+        c-0.8-0.3-1.4-0.8-2-1.3s-0.9-1.2-1.1-2C17.2,14.6,17.1,13.8,17.1,12.9z M25.1,11.6c0-0.4,0-0.7-0.2-1.1c-0.1-0.3-0.3-0.7-0.4-0.9
+        c-0.2-0.3-0.4-0.4-0.8-0.6c-0.3-0.2-0.7-0.2-1.1-0.2c-0.4,0-0.8,0-1.1,0.2c-0.3,0.2-0.6,0.4-0.9,0.6c-0.2,0.3-0.4,0.6-0.5,0.9
+        c-0.1,0.3-0.2,0.7-0.3,1.1L25.1,11.6L25.1,11.6L25.1,11.6z M38.9,17.6c0,1.9-0.5,3.3-1.4,4.2c-1,0.9-2.4,1.3-4.4,1.3
+        c-0.7,0-1.4,0-2.2-0.2c-0.7-0.1-1.3-0.3-1.9-0.5l0.5-2.4c0.5,0.2,1,0.3,1.6,0.5c0.6,0.1,1.3,0.2,2,0.2c1.1,0,1.9-0.2,2.4-0.7
+        c0.5-0.5,0.7-1.1,0.7-2v-0.4c-0.3,0.2-0.6,0.3-1.1,0.4c-0.4,0.1-0.9,0.2-1.5,0.2c-0.8,0-1.4-0.1-2.1-0.4c-0.6-0.2-1.1-0.6-1.6-1.1
+        c-0.4-0.5-0.8-1.1-1.1-1.8s-0.4-1.5-0.4-2.4s0.1-1.7,0.4-2.4c0.3-0.7,0.7-1.4,1.1-1.9C30.4,7.8,31,7.3,31.8,7
+        c0.7-0.3,1.5-0.4,2.5-0.4c0.9,0,1.8,0,2.6,0.2c0.9,0.1,1.5,0.3,2,0.4L38.9,17.6L38.9,17.6L38.9,17.6z M31.2,12.5
+        c0,1.1,0.3,2,0.8,2.6c0.5,0.6,1.1,0.9,2,0.9c0.4,0,0.9,0,1.3-0.2c0.4-0.1,0.7-0.3,0.9-0.4V9c-0.2,0-0.4-0.1-0.7-0.1
+        c-0.3,0-0.7,0-1.1,0c-1,0-1.8,0.3-2.3,1C31.5,10.5,31.2,11.4,31.2,12.5z M44.4,6.5c0.9,0,1.7,0.1,2.3,0.3c0.6,0.2,1.1,0.6,1.5,0.9
+        c0.4,0.4,0.7,0.9,0.8,1.5c0.2,0.6,0.2,1.2,0.2,2v7.2c-0.4,0.1-1.1,0.2-2,0.3c-0.9,0.1-1.8,0.2-2.9,0.2c-0.7,0-1.4,0-2-0.2
+        c-0.6-0.1-1.1-0.3-1.5-0.7c-0.4-0.3-0.8-0.7-1-1.2c-0.2-0.5-0.3-1.1-0.3-1.8c0-0.7,0.1-1.3,0.4-1.7c0.3-0.5,0.6-0.9,1.1-1.1
+        c0.4-0.3,1-0.5,1.6-0.7c0.6-0.1,1.2-0.2,1.9-0.2c0.3,0,0.6,0,0.9,0c0.3,0,0.7,0.1,1.1,0.2v-0.4c0-0.3,0-0.6-0.1-0.9
+        c0-0.3-0.2-0.6-0.4-0.8c-0.2-0.2-0.4-0.4-0.8-0.5c-0.3-0.1-0.7-0.2-1.1-0.2c-0.7,0-1.2,0-1.8,0.1c-0.6,0.1-1,0.2-1.3,0.3l-0.3-2.3
+        c0.3-0.1,0.9-0.2,1.5-0.4C42.9,6.6,43.6,6.5,44.4,6.5z M44.6,16.8c0.9,0,1.5,0,2-0.1v-3c-0.2,0-0.4-0.1-0.7-0.1c-0.3,0-0.6,0-0.9,0
+        c-0.3,0-0.6,0-0.9,0c-0.3,0-0.6,0.1-0.9,0.3c-0.3,0.1-0.4,0.3-0.6,0.5c-0.2,0.2-0.2,0.5-0.2,0.9c0,0.7,0.2,1.1,0.6,1.4
+        C43.4,16.7,43.9,16.8,44.6,16.8z"></path>
+                    <path class="st0" d="M57.7,12.5c0-1.3-0.2-2.2-0.4-2.7c-0.3-0.6-0.9-0.9-1.8-0.9c-0.3,0-0.7,0-1,0c-0.4,0-0.7,0.1-0.9,0.1v9.7h-2.8
+        V7.2c0.6-0.2,1.2-0.3,2.1-0.4c0.9-0.1,1.8-0.2,2.7-0.2c0.9,0,1.5,0.1,2,0.3c0.6,0.2,0.9,0.5,1.3,0.9c0.2-0.1,0.4-0.3,0.7-0.4
+        C60,7.2,60.3,7.1,60.6,7c0.3-0.1,0.7-0.2,1-0.3c0.3-0.1,0.7-0.1,1.1-0.1c0.9,0,1.7,0.1,2.3,0.4c0.6,0.3,1.1,0.7,1.4,1.1
+        c0.3,0.5,0.6,1.1,0.7,1.7c0.1,0.7,0.2,1.4,0.2,2.2v6.8h-2.8v-6.3c0-1.3-0.2-2.2-0.4-2.7c-0.3-0.6-0.9-0.9-1.8-0.9
+        c-0.4,0-0.9,0-1.3,0.2c-0.4,0.2-0.7,0.3-0.9,0.4c0.1,0.4,0.2,0.8,0.3,1.2c0,0.4,0,0.9,0,1.4v6.6h-2.8v-6.3H57.7z M71.7,3.7
+        c0,0.5-0.2,0.9-0.5,1.2c-0.3,0.3-0.7,0.4-1.2,0.4c-0.5,0-0.9-0.2-1.2-0.4c-0.3-0.3-0.5-0.7-0.5-1.2c0-0.6,0.2-0.9,0.5-1.3
+        C69.1,2.1,69.5,2,70,2c0.4,0,0.9,0.2,1.2,0.4C71.5,2.8,71.7,3.2,71.7,3.7z M68.6,6.8h2.8v12h-2.8V6.8z M79.5,9.2
+        c-0.2,0-0.3,0-0.7-0.2c-0.4,0-0.9-0.1-1.4-0.1c-0.3,0-0.6,0-1,0.1c-0.3,0-0.6,0.1-0.7,0.2v9.6h-2.8V7.4c0.6-0.2,1.2-0.4,2-0.6
+        c0.8-0.2,1.7-0.3,2.6-0.3c0.2,0,0.4,0,0.7,0c0.2,0,0.5,0,0.7,0.1c0.2,0.1,0.5,0.1,0.7,0.1c0.2,0,0.4,0.1,0.6,0.2L79.5,9.2z"></path>
+                    <path class="st0" d="M90.3,5c0-0.4-0.3-0.8-0.7-0.8S88.8,4.6,88.8,5c0,0.4,0.3,0.7,0.8,0.7C89.9,5.7,90.3,5.5,90.3,5z"></path>
+                    <path class="st0" d="M93.3,0c-7.1,0-12.8,5.7-12.8,12.8c0,4.3,2.1,8,5.3,10.3l3.4-3.4V6.9c0-0.4-0.1-0.6-0.4-0.7
+        c-0.4-0.2-0.7-0.7-0.7-1.1c0-0.7,0.6-1.3,1.3-1.3s1.3,0.6,1.3,1.3c0,0.5-0.3,0.9-0.7,1.1c-0.2,0.1-0.4,0.3-0.4,0.6V20l0,0l-3.5,3.5
+        c2,1.3,4.4,2,6.9,2c7.1,0,12.8-5.7,12.8-12.8C106.1,5.7,100.4,0,93.3,0z M88.6,8v10.5H88V8H88.6z M91.1,18.6h-0.6V8.1h0.6V18.6z
+         M98.8,18.6c-0.5,0.2-1,0.2-1.6,0.2c-0.7,0-1.3-0.1-1.8-0.3c-0.4-0.2-0.9-0.4-1.1-0.9c-0.3-0.4-0.5-0.9-0.6-1.3
+        c-0.1-0.6-0.2-1.1-0.2-1.8V5.2l1.9-0.3v3.3h4v1.6h-4v4.9c0,0.6,0,0.9,0.1,1.3c0,0.3,0.2,0.6,0.4,0.9c0.2,0.2,0.4,0.3,0.6,0.4
+        c0.2,0,0.6,0.1,0.9,0.1c0.6,0,1,0,1.4-0.2c0.3-0.1,0.6-0.2,0.7-0.3l0.4,1.5C99.7,18.4,99.3,18.4,98.8,18.6z"></path>
+    </svg>
+                <span class="main-logo__text">
+                                Поддержка сайтов
+                            </span>
+            </a>
+            <nav class="main-nav">
+
+                <ul class="main-nav__list">
+
+
+
+
+
+                    <li class="main-nav__item">
+                        <a href="http://test.support-mmit.ru/service/" class="root-item-selected">
+                            Задачи                    </a>
+                    </li>
+
+
+
+
+
+
+
+
+                    <li class="main-nav__item">
+                        <a href="http://test.support-mmit.ru/invoice/" class="root-item">
+                            Счета                    </a>
+                    </li>
+
+
+
+
+
+
+                </ul>
+            </nav>
+        </div>
+        <div class="header__col">
+            <!--правки 27.03-->
+            <div class="header__information">
+
+                <div class="header__information-item">
+        <span class="header__information-title">
+            Баланс            <div class="submenu submenu_flex" style="display: none;">
+                    <table class="table-submenu">
+                        <thead>
+                        <tr class="table-submenu__header">
+                            <th class="header-site header-table">
+                                Сайт
+                            </th>
+                            <th class="header-service header-table">
+                                Тариф
+                            </th>
+                            <th class="header-improvements header-table">
+                                Доработка
+                            </th>
+                            <th class="header-paid-period header-table">
+                                Оплачено
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                                                <tr class="submenu-body">
+                            <td class="submenu-site submenu-td">
+                                <a href="http://android.com/" target="_blank">
+                                    android.com                                </a>
+                            </td>
+                            <td class="submenu-time submenu-td">
+                                0&nbsp;мин                            </td>
+                            <td class="submenu-improvements submenu-td">
+                                0&nbsp;мин                            </td>
+                            <td class="submenu-paid-period submenu-td">
+                                -                            </td>
+                        </tr>
+                                                <tr class="submenu-body">
+                            <td class="submenu-site submenu-td">
+                                <a href="http://support-mmit.ru/" target="_blank">
+                                    support-mmit.ru                                </a>
+                            </td>
+                            <td class="submenu-time submenu-td">
+                                0&nbsp;мин                            </td>
+                            <td class="submenu-improvements submenu-td">
+                                –4&nbsp;ч                            </td>
+                            <td class="submenu-paid-period submenu-td">
+                                до 30 апреля                            </td>
+                        </tr>
+                                                </tbody>
+                    </table>
+                </div>
+        </span>
+
+                </div>
+                <a href="http://test.support-mmit.ru/service/?archive=Y#recharge-popup" class="replenish">
+                    Пополнить
+                </a>
+                <span class="header__information-text">–4&nbsp;ч </span>
+                <div id="recharge-popup" class="recharge mfp-hide">
+                    <div class="recharge__title">
+                        Пополнение баланса
+                    </div>
+                    <form action="http://test.support-mmit.ru/service/?archive=Y#" method="post" class="recharge__form">
+                        <div class="site-block">
+                            <label for="balance-site" class="quantity-block__label">Название сайта</label>
+                            <div class="custom-select-wrapper">
+                                <select name="" id="balance-site" class="custom-select select2-hidden-accessible" data-select2-id="balance-site" tabindex="-1" aria-hidden="true">
+                                    <option value="11351" data-select2-id="2">android.com</option>
+                                    <option value="11349">support-mmit.ru</option>
+                                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-balance-site-container"><span class="select2-selection__rendered" id="select2-balance-site-container" role="textbox" aria-readonly="true" title="android.com"><span class="select2-selection__clear" data-select2-id="3">×</span>android.com</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                            </div>
+                        </div>
+                        <div class="quantity-block">
+                            <label for="quantity-number-switch" class="quantity-block__label">
+                                Количество часов
+                            </label>
+                            <div class="quantity-block__wrapper">
+                                <button type="button" class="quantity-add quantity-minus noActive"></button>
+                                <input id="quantity-number-switch" class="quantity-num hour-input" data-cost-hours="1800" data-cost-more-20="1350" type="text" value="1">
+                                <button type="button" class="quantity-add quantity-plus"></button>
+                            </div>
+                        </div>
+                        <div class="rate">
+                            1 час - 1 800 руб. (от 20 часов - 1350 руб.)
+                        </div>
+                        <div class="rate-sum">
+                            К оплате <span class="total">1 800</span> руб.
+                        </div>
+                        <button type="submit" class="button btn-score" id="create-invoice">
+                            Сформировать счет
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="user-information">
+                <a href="http://test.support-mmit.ru/service/?archive=Y#">
+                    <img class="user-information__img" src="./Список задач_files/noavatar.png" alt="avatar">
+                    Тестер Тикетной                             </a>
+                <div class="submenu sign-in" style="display: none;">
+                    <div class="sign-in__item sign-in__escape">
+                        <a href="http://test.support-mmit.ru/auth/?logout=yes">Выйти</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notice">
+                <div class="notice__logo">
+                    <i class="fas fa-bell"></i>
+                    <div class="notice__new-notice">11</div>                            </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="menu-saidbar">
+    <div class="menu-saidbar__close">
+        <div class="menu-saidbar__close-wrapper">
+
+        </div>
+    </div>
+    <div class="menu-saidbar__menu">
+        <div class="menu-saidbar__wrapper">
+            <div class="menu-saidbar__header">
+                <div class="menu-saidbar__title new-notice">
+                    Уведомления
+                </div>
+                <div class="menu-saidbar__close-button">
+                    <span class="menu-saidbar__close-span"></span>
+                    <span class="menu-saidbar__close-span"></span>
+                </div>
+            </div>
+            <div class="menu-saidbar__notice">
+                <div class="menu-saidbar__notice-item notice-new">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        <div class="menu-saidbar__sub-title">
+                            Обращение от Flyboots
+                        </div>
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item notice-new">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<main class="main-block new-ticket">
+    <div class="template-wrapper template-wrapper__main">
+        <a href="#" class="go-back-link"><span class="go-back-link-wrapper">К списку задач</span></a>
+        <div class="add-new-ticket-wrapper">
+            <div class="add-popup">
+                <h2 class="form-title">Новая задача</h2>
+                <form class="form-add" action="#" method="post">
+                    <div class="form-add__item">
+                        <label class="form-add__label">
+                            <span class="form-add__label-text">Сайт</span>
+                            <span class="add-input-wrapper">
+                    <span class="custom-select-wrapper custom-select-wrapper_add-site">
+                        <select name="client-site" class="custom-select">
+                            <option value="support-mmit.ru">support-mmit.ru</option>
+                            <option value="dns.ru">dns.ru</option>
+                            <option value="apple.com">apple.com</option>
+                        </select>
+                    </span>
+                    <span class="explanatory-text">
+                        Выберите ваш сайт
+                    </span>
+                </span>
+                        </label>
+                    </div>
+                    <div class="form-add__item">
+                        <label class="form-add__label">
+                <span class="form-add__label-text">
+                    Тема
+                </span>
+                    <span class="add-input-wrapper">
+                        <input type="text" class="input-form" required name="TITLE">
+                    <span class="explanatory-text">
+                        Например, не работает форма обратного звонка
+                    </span>
+                </span>
+                        </label>
+                    </div>
+                    <div class="form-add__item">
+                        <label class="form-add__label">
+                <span class="form-add__label-text">
+                    Описание
+                </span>
+                            <span class="add-input-wrapper">
+                    <textarea name="ticket-text" required class="input-form input-form_textarea custom-scroll"></textarea>
+                    <span class="explanatory-text">
+                        Расскажите подробнее, что нужно сделать
+                    </span>
+                </span>
+                        </label>
+                    </div>
+                    <div class="form-add__item form-add__item_date">
+                        <div class="form-add__label">
+                            <div class="form-add__label-text"></div>
+                            <div class="add-input-wrapper">
+                                <div class="add-date-text">
+                                    Желаемая дата выполнения задачи <span class="pseudo-date-input">
+                        <input type="text" autocomplete="off" class="add-date-input input-width-buffer custom-datapicker" name="desired_date">
+                        <input type="hidden" class="date-to-server">
+                        <span class="pseudo-date-input__wrapper"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-add__item">
+                        <div class="form-add__label">
+                            <div class="form-add__label-text"></div>
+                            <div class="input-file-wrapper">
+                                <div class="custome-add-file">
+                                    <input type="file" name="FILE" class="add-file-input" id="add-file">
+                                    <label for="add-file" class="input-file-custom">
+                                        Прикрепить файл
+                                    </label>
+                                </div>
+                                <div class="download-status">
+                                    <div class="download-progress">
+                                        <div class="download-progress__icon">
+                                            <svg class="upload-svg" width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <g transform="translate(-968.000000, -616.000000)" fill="#186CA6">
+                                                        <g id="Group-20" transform="translate(968.000000, 616.000000)">
+                                                            <path class="upload-ray8" d="M6.5,9.55360624 C6.21310071,9.55360624 5.98050682,9.78912122 5.98050682,10.0796804 L5.98050682,12.4739258 C5.98050682,12.764485 6.21310071,13 6.5,13 C6.78692441,13 7.01949318,12.764485 7.01949318,12.4739258 L7.01949318,10.0796804 C7.01949318,9.78914665 6.78692441,9.55360624 6.5,9.55360624 Z" id="Path"></path>
+                                                            <path class="upload-ray7" d="M4.33180788,8.66818735 C4.12707448,8.46343073 3.79507984,8.46343073 3.59034644,8.66818735 L1.90210708,10.3564091 C1.69734832,10.5611657 1.69734832,10.8931316 1.90210708,11.0978882 C2.00447378,11.2002792 2.13868114,11.251462 2.27286315,11.251462 C2.40704516,11.251462 2.54122717,11.2002792 2.64359387,11.0978882 L4.33183323,9.40966642 C4.53656664,9.20490979 4.53656664,8.87294397 4.33180788,8.66818735 Z" id="Combined-Shape"></path>
+                                                            <path class="upload-ray6" d="M2.92031959,5.98050682 L0.526074173,5.98050682 C0.235540414,5.98050682 -3.24806848e-12,6.21310071 -3.24806848e-12,6.5 C-3.24806848e-12,6.78692441 0.235540414,7.01949318 0.526074173,7.01949318 L2.92031959,7.01949318 C3.21085335,7.01949318 3.44639376,6.78692441 3.44639376,6.5 C3.4464192,6.21310071 3.21085335,5.98050682 2.92031959,5.98050682 Z" id="Combined-Shape"></path>
+                                                            <path class="upload-ray5" d="M4.33180788,3.59034431 L2.64356852,1.9021069 C2.43883512,1.69734838 2.10684048,1.69734838 1.90210708,1.9021069 C1.69734832,2.10684007 1.69734832,2.43880897 1.90210708,2.64356749 L3.59034644,4.33180489 C3.69271314,4.43417147 3.8269205,4.48538012 3.96110251,4.48538012 C4.09528452,4.48538012 4.22949188,4.43419683 4.33183323,4.33180489 C4.53656664,4.12707172 4.53656664,3.79510282 4.33180788,3.59034431 Z" id="Combined-Shape"></path>
+                                                            <path class="upload-ray4" d="M11.0978898,8.66818735 C10.8931563,8.46343073 10.5611617,8.46343073 10.3564283,8.66818735 L8.66818895,10.3564091 C8.46343019,10.5611657 8.46343019,10.8931316 8.66818895,11.0978882 C8.77055565,11.2002792 8.90476301,11.251462 9.03894502,11.251462 C9.17312703,11.251462 9.30730904,11.2002792 9.40967574,11.0978882 L11.0979151,9.40966642 C11.3026485,9.20490979 11.3026485,8.87294397 11.0978898,8.66818735 Z" id="Path" transform="translate(9.883041, 9.883041) scale(-1, 1) translate(-9.883041, -9.883041) "></path>
+                                                            <path class="upload-ray3" d="M12.4739258,5.98050682 L10.0796804,5.98050682 C9.78914665,5.98050682 9.55360624,6.21310071 9.55360624,6.5 C9.55360624,6.78692441 9.78914665,7.01949318 10.0796804,7.01949318 L12.4739258,7.01949318 C12.7644596,7.01949318 13,6.78692441 13,6.5 C13.0000254,6.21310071 12.7644596,5.98050682 12.4739258,5.98050682 Z" id="Combined-Shape" transform="translate(11.276803, 6.500000) scale(-1, 1) translate(-11.276803, -6.500000) "></path>
+                                                            <path class="upload-ray2" d="M11.0978898,3.59034431 L9.40965039,1.9021069 C9.20491699,1.69734838 8.87292235,1.69734838 8.66818895,1.9021069 C8.46343019,2.10684007 8.46343019,2.43880897 8.66818895,2.64356749 L10.3564283,4.33180489 C10.458795,4.43417147 10.5930024,4.48538012 10.7271844,4.48538012 C10.8613664,4.48538012 10.9955738,4.43419683 11.0979151,4.33180489 C11.3026485,4.12707172 11.3026485,3.79510282 11.0978898,3.59034431 Z" id="Combined-Shape" transform="translate(9.883041, 3.116959) scale(-1, 1) translate(-9.883041, -3.116959) "></path>
+                                                            <path class="upload-ray1" d="M6.5,3.89466237e-13 C6.21310071,3.89466237e-13 5.98050682,0.235540414 5.98050682,0.526074173 L5.98050682,2.92031959 C5.98050682,3.21085335 6.21310071,3.44639376 6.5,3.44639376 C6.78692441,3.44639376 7.01949318,3.21085335 7.01949318,2.92031959 L7.01949318,0.526074173 C7.01949318,0.235540414 6.78692441,3.89466237e-13 6.5,3.89466237e-13 Z" id="Combined-Shape"></path>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="download-progress__text">
+                                            Загрузка...
+                                        </div>
+                                    </div>
+                                    <div class="uploaded-files">
+                                        <div class="download-status__icon">
+                                            <span class="quantity-files"></span>
+                                            <svg width="15px" height="13px" viewBox="0 0 15 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <title>Group 20</title>
+                                                <desc>Created with Sketch.</desc>
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <g transform="translate(-670.000000, -616.000000)">
+                                                        <g transform="translate(360.000000, 120.000000)">
+                                                            <g transform="translate(135.000000, 488.000000)">
+                                                                <g transform="translate(175.000000, 5.000000)">
+                                                                    <g transform="translate(0.000000, 3.000000)">
+                                                                        <g>
+                                                                            <path d="M6.36468656e-12,3 L14.1666667,3 C14.626904,3 15,3.40701386 15,3.90909091 L15,12.0909091 C15,12.5929861 14.626904,13 14.1666667,13 L0.833333333,13 C0.373096042,13 6.36468656e-12,12.5929861 6.36468656e-12,12.0909091 L6.36468656e-12,3 Z M8.21812286,2 L9.07718345e-13,2 L9.07718345e-13,0.666666667 C9.07718345e-13,0.298476833 0.399146224,0 0.891518044,0 L5.15270119,3.10744023e-12 C5.40069636,3.25902268e-12 5.63748462,0.077244923 5.8061794,0.213177264 L7.89138376,1.89341137 C7.97573114,1.96137754 8.09412527,2 8.21812286,2 Z" id="Shape" fill="#186CA6"></path>
+                                                                            <polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" points="10.2817083 5 6.5881472 9.43234286 4.72118848 7.52450237 4 8.48171819 6.5881472 11 11 5.84432846"></polygon>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="download-status__text">
+                                <span class="download-status-text">
+                                    Загружен
+                                </span>
+                                            <div class="files-list-wrapper">
+                                                <div class="files-list">
+                                                    <div class="files-list__wrapper custom-scroll">
+                                                        <ul class="files-list__items"></ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-add__item form-add__item_create-ticket">
+                        <div class="form-add__label">
+                            <div class="form-add__label-text"></div>
+                            <div class="add-input-wrapper">
+                                <button class="btn btn_add-ticket btn_add-ticket_not-active">
+                                    Создать задачу
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-add__item form-add__item_agreement">
+                        <div class="form-add__label">
+                            <div class="form-add__label-text"></div>
+                            <div class="add-input-wrapper">
+                                <label class="new-custom-checkbox">
+                                    <input type="checkbox" checked required class="new-custom-checkbox__input" name="agreement">
+                                    <span class="check-mark">
+                            <svg class="check-mark-svg" width="12px" height="10px" viewBox="0 0 12 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+                                <title>Shape</title>
+                                <desc>Created with Sketch.</desc>
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-497.000000, -758.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                                        <g transform="translate(360.000000, 120.000000)">
+                                            <g transform="translate(135.000000, 633.000000)">
+                                                <g transform="translate(0.000000, 2.000000)">
+                                                    <path d="M12.3025936,3 C10.417261,5.0414597 8.24713365,7.38052123 6.28699799,9.50033014 L3.69141115,7.1922869 L2,9.00809601 L5.59438078,12.2447749 L6.43682377,13 L7.21061407,12.1638579 C9.3384875,9.85934257 11.8681328,7.13600093 14,4.82738576 L12.3025936,3 Z" id="Shape"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </span>
+                                    <span class="new-custom-checkbox__text">
+                            Я соглашаюсь с <a class="agreement-link" href="/how-made/#work-client" target="_blank">
+                                принципами командной работы
+                            </a>
+                        </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="main-footer">
+    <div class="template-wrapper main-footer__wrapper">
+        <div class="footer-container">
+            <div class="main-footer__col">
+                <div class="main-footer__text">
+                    <div class="footer-img-container">
+                        <img src="./Список задач_files/manager_photo.png" alt="Константин Иванов">
+                    </div>
+                    <div class="footer-text">
+                        <div class="footer-text__name">
+                            Алиса Сазонова
+                        </div>
+                        <div class="online ">
+                            В сети
+                        </div>
+                        <div class="main-footer__position">
+                            Менеджер службы поддержки
+                        </div>
+                        <a href="http://test.support-mmit.ru/service/?archive=Y#callback-modal" class="write-in-chat callback-link">
+                            Задать вопрос
+                        </a>
+                    </div>
+                </div>
+                <div class="main-footer-shedule">
+                    <div class="footer-shedule-text">
+                        или звоните
+                    </div>
+                    <a href="tel:+73952682227" class="footer-phone-link">
+                        +7 (3952) 68-22-27
+                    </a>
+                    <div class="footer-operation-mode">
+                        В будни с 9:00 до 18:00 (МСК +5)
+                    </div>
+                </div>
+            </div>
+            <div class="main-footer__col">
+                <div class="mobile-app">
+                    <h4 class="main-footer-title">
+                        Мобильное приложение
+                    </h4>
+                    <div class="mobile-app__items">
+                        <a href="http://play.google.com/store/apps/details?id=ru.mmit.megamirit" target="_blank">
+                            <svg width="110px" height="36px" viewBox="0 0 110 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+                                <title>Group 24</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs>
+                                    <lineargradient x1="60.5858644%" y1="4.96929725%" x2="27.5021978%" y2="71.9012963%" id="linearGradient-1">
+                                        <stop stop-color="#00A0FF" offset="0%"></stop>
+                                        <stop stop-color="#00A1FF" offset="1%"></stop>
+                                        <stop stop-color="#00BEFF" offset="26%"></stop>
+                                        <stop stop-color="#00D2FF" offset="51%"></stop>
+                                        <stop stop-color="#00DFFF" offset="76%"></stop>
+                                        <stop stop-color="#00E3FF" offset="100%"></stop>
+                                    </lineargradient>
+                                    <lineargradient x1="107.586594%" y1="49.9666444%" x2="-130.444538%" y2="49.9666444%" id="linearGradient-2">
+                                        <stop stop-color="#FFE000" offset="0%"></stop>
+                                        <stop stop-color="#FFBD00" offset="41%"></stop>
+                                        <stop stop-color="#FFA500" offset="78%"></stop>
+                                        <stop stop-color="#FF9C00" offset="100%"></stop>
+                                    </lineargradient>
+                                    <lineargradient x1="86.2463694%" y1="30.0565152%" x2="-50.1281394%" y2="139.809076%" id="linearGradient-3">
+                                        <stop stop-color="#FF3A44" offset="0%"></stop>
+                                        <stop stop-color="#C31162" offset="100%"></stop>
+                                    </lineargradient>
+                                    <lineargradient x1="-18.793781%" y1="-14.5939522%" x2="42.0980694%" y2="34.4175629%" id="linearGradient-4">
+                                        <stop stop-color="#32A071" offset="0%"></stop>
+                                        <stop stop-color="#2DA771" offset="7%"></stop>
+                                        <stop stop-color="#15CF74" offset="48%"></stop>
+                                        <stop stop-color="#06E775" offset="80%"></stop>
+                                        <stop stop-color="#00F076" offset="100%"></stop>
+                                    </lineargradient>
+                                </defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-655.000000, -592.000000)">
+                                        <g id="Group-24" transform="translate(655.000000, 592.000000)">
+                                            <rect id="Rectangle" fill="#323232" x="0" y="0" width="110" height="36" rx="4"></rect>
+                                            <path d="M52.1271186,18.3072566 C50.3835741,18.3161214 48.9768467,19.6619791 48.983071,21.31526 C48.9892953,22.9685409 50.4061204,24.3048409 52.1496872,24.3019018 C53.8932541,24.2989627 55.3050597,22.9578945 55.3050847,21.3046031 C55.3179131,20.5031876 54.9866538,19.7312504 54.3873587,19.1660162 C53.7880635,18.6007819 52.9722149,18.290807 52.1271186,18.3072566 L52.1271186,18.3072566 Z M52.1271186,23.1287255 C51.1694915,23.1287255 50.3432203,22.3793889 50.3432203,21.3206746 C50.3432203,20.2619604 51.1694915,19.5126238 52.1271186,19.5126238 C53.0847458,19.5126238 53.9110169,20.2499068 53.9110169,21.3206746 C53.9110169,22.3914425 53.0911017,23.1206897 52.1271186,23.1206897 L52.1271186,23.1287255 Z M45.2076271,18.3072566 C43.4640826,18.3161214 42.0573552,19.6619791 42.0635795,21.31526 C42.0698037,22.9685409 43.4866289,24.3048409 45.2301957,24.3019018 C46.9737626,24.2989627 48.3855682,22.9578945 48.3855932,21.3046031 C48.397775,20.5044219 48.0671887,19.7337679 47.4694193,19.1688428 C46.8716498,18.6039177 46.0578127,18.2930285 45.2139831,18.3072566 L45.2076271,18.3072566 Z M45.2076271,23.1287255 C44.25,23.1287255 43.4237288,22.3793889 43.4237288,21.3206746 C43.4237288,20.2619604 44.25,19.5126238 45.2076271,19.5126238 C46.1652542,19.5126238 46.9915254,20.2499068 46.9915254,21.3206746 C46.9915254,22.3914425 46.1716102,23.1206897 45.2139831,23.1206897 L45.2076271,23.1287255 Z M36.9809322,19.2273536 L36.9809322,20.499016 L40.1885593,20.499016 C40.144751,21.0979645 39.886928,21.6648597 39.4576271,22.1061723 C38.8085293,22.7354456 37.9084597,23.0742037 36.9809322,23.0383229 C35.0104926,23.0383229 33.4131357,21.5236736 33.4131357,19.6552589 C33.4131357,17.7868443 35.0104926,16.2721949 36.9809322,16.2721949 C37.8814264,16.2610225 38.7501718,16.5873514 39.3983051,17.1802382 L40.345339,16.2842486 C39.451532,15.4447831 38.2388175,14.9820623 36.9809322,15.0005325 C34.2754237,15.0005325 32,17.0898357 32,19.6552589 C32,22.2206822 34.2754237,24.3099854 36.9809322,24.3099854 C38.440678,24.3099854 39.5423729,23.8559637 40.404661,23.0041709 C41.2669492,22.152378 41.565678,20.9831718 41.565678,20.0289228 C41.5690839,19.7628147 41.5449571,19.4970313 41.4936441,19.2353893 L36.9809322,19.2273536 Z M70.6504237,20.2137457 C70.3877119,19.5447669 69.5911017,18.3072566 67.9449153,18.3072566 C66.2987288,18.3072566 64.9639831,19.5226685 64.9639831,21.3046031 C64.9454979,22.100596 65.2690748,22.8695133 65.8604032,23.4347702 C66.4517315,24.0000272 67.2599962,24.3130492 68.0995763,24.3019496 C69.1572439,24.3081571 70.147132,23.8090124 70.7330508,22.9740367 L69.6567797,22.2930042 C69.3276758,22.8097044 68.7361517,23.1241116 68.0995763,23.1206897 C67.4411445,23.1436907 66.8343691,22.7839925 66.5677966,22.2126464 L70.7944915,20.5532575 L70.6504237,20.2137457 Z M66.3411017,21.2182184 C66.3104423,20.7775439 66.4681314,20.343715 66.7786197,20.0145329 C67.0891081,19.6853509 67.5262601,19.4885249 67.9915254,19.468427 C68.5423729,19.468427 69.0105932,19.7295899 69.1652542,20.1052627 L66.3411017,21.2182184 Z M62.904661,24.1231535 L64.2923729,24.1231535 L64.2923729,15.3099101 L62.904661,15.3099101 L62.904661,24.1231535 Z M60.6292373,18.9802533 L60.5826271,18.9802533 C60.154724,18.5407009 59.5480522,18.296984 58.9173729,18.3112745 C57.3368644,18.3112745 55.8877119,19.6291426 55.8877119,21.3246925 C55.8877119,23.0202424 57.3368644,24.3099854 58.9173729,24.3099854 C59.5510306,24.3260456 60.1600565,24.0769747 60.5826271,23.6289529 L60.6292373,23.6289529 L60.6292373,24.0588672 C60.6292373,25.205975 59.9830508,25.8187034 58.934322,25.8187034 C58.2245355,25.80299 57.5954834,25.3812436 57.3432203,24.7519534 L56.1334746,25.2280734 C56.5989605,26.3048048 57.7071061,27.0058469 58.934322,26.9999632 C60.5635593,26.9999632 61.940678,26.0919199 61.940678,23.8780621 L61.940678,18.4880617 L60.6228814,18.4880617 L60.6292373,18.9802533 Z M59.0381356,23.1247076 C58.0805085,23.1247076 57.2775424,22.3633173 57.2775424,21.3166568 C57.2775424,20.2699962 58.0805085,19.4885165 59.0381356,19.4885165 C59.9957627,19.4885165 60.7330508,20.2599515 60.7330508,21.3166568 C60.7330508,22.373362 59.9830508,23.1206897 59.0381356,23.1206897 L59.0381356,23.1247076 Z M77.154661,15.3099101 L73.8326271,15.3099101 L73.8326271,24.1191356 L75.220339,24.1191356 L75.220339,20.7822773 L77.154661,20.7822773 C78.6927966,20.7822773 80.2033898,19.727581 80.2033898,18.0460937 C80.2033898,16.3646064 78.6927966,15.3099101 77.154661,15.3099101 Z M77.190678,19.5487848 L75.220339,19.5487848 L75.220339,16.5353667 L77.190678,16.5353667 C77.7860666,16.4941096 78.3558209,16.7719239 78.666791,17.2551252 C78.9777611,17.7383264 78.9777611,18.3458252 78.666791,18.8290264 C78.3558209,19.3122276 77.7860666,19.590042 77.190678,19.5487848 L77.190678,19.5487848 Z M85.7605932,18.2831492 C84.7563559,18.2831492 83.7161017,18.7030188 83.2860169,19.6311516 L84.5169492,20.1193253 C84.7817797,19.6311516 85.2711864,19.4724449 85.7881356,19.4724449 C86.5063559,19.4724449 87.2351695,19.874234 87.2478814,20.6054901 L87.2478814,20.6979016 C86.8025319,20.4728658 86.3054839,20.3555554 85.8008475,20.3563809 C84.4745763,20.3563809 83.1228814,21.0474581 83.1228814,22.3412189 C83.1228814,23.5184609 84.2118644,24.2778423 85.4300847,24.2778423 C86.140887,24.3180195 86.8185381,23.9886574 87.1991525,23.4180136 L87.2478814,23.4180136 L87.2478814,24.0970372 L88.5847458,24.0970372 L88.5847458,20.7280358 C88.5805085,19.1630673 87.3495763,18.291185 85.7605932,18.291185 L85.7605932,18.2831492 Z M85.5932203,23.1046181 C85.1398305,23.1046181 84.5063559,22.889661 84.5063559,22.3572905 C84.5063559,21.676258 85.2944915,21.417104 85.9766949,21.417104 C86.4204234,21.405658 86.8593089,21.5069239 87.2478814,21.7104101 C87.1500481,22.5052541 86.4455552,23.1079299 85.6016949,23.1186808 L85.5932203,23.1046181 Z M93.4576271,18.4840438 L91.8686441,22.30104 L91.8199153,22.30104 L90.1716102,18.4840438 L88.6779661,18.4840438 L91.1504237,23.8218117 L89.7415254,26.7910329 L91.1864407,26.7910329 L95,18.4840438 L93.4576271,18.4840438 Z M80.9682203,24.1191356 L82.3538136,24.1191356 L82.3538136,15.3099101 L80.9682203,15.3099101 L80.9682203,24.1191356 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                            <g id="Group-17" transform="translate(10.000000, 9.000000)">
+                                                <path d="M0.366908069,0.324503268 C0.111928554,0.633263149 -0.0182133549,1.02975784 0.00301001766,1.43316724 L0.00301001766,19.0221551 C-0.0217462834,19.4280289 0.106924345,19.8281271 0.362470288,20.1398879 L0.420161442,20.196568 L10.0678976,10.3432887 L10.0678976,10.116568 L0.424599223,0.258754281 L0.366908069,0.324503268 Z" id="Path" fill="url(#linearGradient-1)"></path>
+                                                <path d="M13.2808511,13.6284709 L10.0678976,10.3432887 L10.0678976,10.116568 L13.28307,6.83138586 L13.3540745,6.87446278 L17.1639096,9.0849891 C18.2511659,9.7152725 18.2511659,10.7491187 17.1639096,11.3816693 L13.3540745,13.5876612 L13.2808511,13.6284709 Z" id="Path" fill="url(#linearGradient-2)"></path>
+                                                <path d="M13.3540745,13.5876612 L10.0678976,10.2276612 L0.366908069,20.1398879 C0.726368339,20.5275802 1.31881212,20.5751915 1.98447928,20.1874992 L13.3540745,13.5876612" id="Path" fill="url(#linearGradient-3)"></path>
+                                                <path d="M13.3540745,6.86766116 L1.98447928,0.267823107 C1.31881212,-0.119869201 0.726368339,-0.0722578651 0.366908069,0.317701649 L10.0678976,10.2276612 L13.3540745,6.86766116 Z" id="Path" fill="url(#linearGradient-4)"></path>
+                                                <path d="M13.28307,13.5128433 L1.98447928,20.0718717 C1.35431437,20.4391591 0.788497274,20.4142199 0.431255895,20.0718717 L0.431255895,20.0718717 L0.37134585,20.1308191 L0.37134585,20.1308191 L0.429037004,20.1874992 L0.429037004,20.1874992 C0.790716165,20.5207786 1.35653326,20.5457178 1.98226039,20.1874992 L13.3540745,13.5876612 L13.28307,13.5128433 Z" id="Path" fill="#000000" opacity="0.2"></path>
+                                                <path d="M0.366908069,20.0219931 C0.112465932,19.7138148 -0.0176410539,19.3182371 0.00301001766,18.9155964 L0.00301001766,19.0312239 C-0.0217462834,19.4370978 0.106924345,19.8371959 0.362470288,20.1489567 L0.422380333,20.0900093 L0.366908069,20.0219931 Z" id="Path" fill="#000000" opacity="0.12"></path>
+                                                <path d="M17.1639096,11.2592401 L13.28307,13.5128433 L13.3540745,13.5876612 L17.1639096,11.3748676 C17.7075378,11.0597259 17.9782424,10.6448272 17.9782424,10.2276612 L17.9782424,10.2276612 C17.9338646,10.6040174 17.6565033,10.9803737 17.1639096,11.2592401 Z" id="Path" fill="#000000" opacity="0.12"></path>
+                                                <path d="M1.98447928,0.383450637 L17.1639096,9.19608222 C17.6565033,9.48175023 17.9338646,9.85130489 17.9782424,10.2276612 L17.9782424,10.2276612 C17.9782424,9.81276238 17.7075378,9.39559639 17.1639096,9.08045469 L1.98447928,0.267823107 C0.89056624,-0.355658675 0.00301001766,0.161264402 0.00301001766,1.43316724 L0.00301001766,1.55106197 C0.00301001766,0.276891932 0.89056624,-0.246832764 1.98447928,0.383450637 Z" id="Path" fill="#FFFFFF" opacity="0.25"></path>
+                                            </g>
+                                            <text font-family="OpenSans-Regular, Open Sans" font-size="7" font-weight="normal" line-spacing="8" fill="#FFFFFF">
+                                                <tspan x="32" y="12">скачать в</tspan>
+                                            </text>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="http://itunes.apple.com/ru/app/megamir-it/id1449119951?mt=8" target="_blank">
+                            <svg width="110px" height="36px" viewBox="0 0 110 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+                                <title>Group 13</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-775.000000, -592.000000)">
+                                        <g id="Group-13" transform="translate(775.000000, 592.000000)">
+                                            <g id="Group-3" fill="#323232">
+                                                <path d="M110.000105,31.1346619 C110.000105,33.8213141 107.823754,36 105.138631,36 L4.86263383,36 C2.17751112,36 0.000105363985,33.8213141 0.000105363985,31.1346619 L0.000105363985,4.86491618 C0.000105363985,2.17847495 2.17751112,2.87492252e-13 4.86263383,2.87492252e-13 L105.138631,2.87492252e-13 C107.823754,2.87492252e-13 110.000105,2.17847495 110.000105,4.86491618 L110.000105,31.1346619 Z" id="Fill-1"></path>
+                                            </g>
+                                            <path d="M28.6458333,24.5604042 C28.0507752,25.8883695 27.7659574,26.4809865 27.0000517,27.6545071 C25.9308,29.2930974 24.4244111,31.3336349 22.5577987,31.3507713 C20.8986595,31.3661724 20.4727255,30.2635837 18.2215444,30.2761649 C15.9705788,30.2883123 15.5002632,31.3700769 13.8409086,31.3546758 C11.9742962,31.3373225 10.5465446,29.4948302 9.47750826,27.8564567 C6.48821388,23.2749545 6.1760346,17.8982349 8.01937894,15.0399207 C9.32971324,13.0084938 11.3960428,11.8195721 13.3395689,11.8195721 C15.3182125,11.8195721 16.5621898,12.9121827 18.198061,12.9121827 C19.7848107,12.9121827 20.7521572,11.8178368 23.0397484,11.8178368 C24.7686916,11.8178368 26.6008328,12.7655468 27.9064273,14.4052218 C23.6292049,16.764844 24.3237984,22.9161739 28.6458333,24.5604042 Z M21.3571206,9.86177411 C20.4651385,10.988819 18.929151,11.8613973 17.4445285,11.8161541 C17.1734592,10.3634854 17.8694771,8.86854721 18.7124682,7.86045164 C19.6415712,6.75039951 21.2328085,5.89863734 22.5926873,5.80645161 C22.8218877,7.32454243 22.1891048,8.81013459 21.3571206,9.86177411 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                                            <path d="M38.1171937,17.1639281 C37.9690321,17.813399 37.8100497,18.4284504 37.6427436,18.9978342 L36.543601,22.5104211 L39.7159656,22.5104211 L38.601216,19.0207805 C38.4076903,18.3614112 38.2568235,17.751309 38.1171937,17.1639281 Z M37.1358312,15 L39.1957352,15 L43.3494624,28.1612903 L41.4029685,28.1612903 L40.1331903,24.1200381 L36.1286653,24.1200381 L34.8940546,28.1612903 L33,28.1612903 L37.1358312,15 Z M48.5198313,19.7011848 C47.4362611,19.7011848 46.4805034,20.4747087 46.1925982,21.5836524 C46.1849644,21.6348849 46.1744951,21.687869 46.1648983,21.7408531 C46.1350172,21.9068115 46.1036094,22.0780246 46.1036094,22.2192425 L46.1036094,23.7776752 C46.1036094,24.0231097 46.1273833,24.2407385 46.1720959,24.4049454 C46.4325192,25.4655029 47.3666841,26.2033391 48.4465464,26.2033391 C50.0282797,26.2033391 51.0110832,24.9328158 51.0110832,22.887455 C51.0110832,21.3016545 50.2409369,19.7011848 48.5198313,19.7011848 Z M49.0007638,18.0967742 C50.1118158,18.0967742 51.1190476,18.5629028 51.8381561,19.4093345 C52.5723142,20.2741573 52.9596774,21.4514111 52.9596774,22.8130145 C52.9596774,24.3537129 52.5138607,25.6435031 51.6680303,26.5405105 C50.9105345,27.3453432 49.8710225,27.7889207 48.7425216,27.7889207 C47.6589514,27.7889207 46.7025393,27.3700837 46.1036094,26.6506386 L46.1036094,31.2580645 L44.1729001,31.2580645 L44.1729001,21.3850716 C44.1729001,20.1309689 44.1513072,19.2573884 44.099179,18.4637218 L44.0887097,18.3008286 L45.8545278,18.3008286 L45.9315206,19.574855 C46.6327441,18.6062534 47.6857789,18.0967742 49.0007638,18.0967742 Z M58.1301554,19.7011848 C57.0463404,19.7011848 56.0901229,20.4747087 55.8033012,21.5836524 C55.7945766,21.6348849 55.7849795,21.6869933 55.7753825,21.7393205 C55.7448463,21.9052789 55.713874,22.0773677 55.713874,22.2192425 L55.713874,23.7776752 C55.713874,24.0231097 55.7372123,24.2407385 55.7819259,24.4049454 C56.0419194,25.4655029 56.9769797,26.2033391 58.0564324,26.2033391 C59.6373321,26.2033391 60.6208141,24.9328158 60.6208141,22.887455 C60.6208141,21.3016545 59.8504308,19.7011848 58.1301554,19.7011848 Z M58.6106634,18.0967742 C59.7217428,18.0967742 60.7289993,18.5629028 61.4476892,19.4093345 C62.1818653,20.2741573 62.5698925,21.4514111 62.5698925,22.8130145 C62.5698925,24.3537129 62.1234104,25.6435031 61.2790861,26.5405105 C60.5202629,27.3453432 59.4805072,27.7889207 58.3521967,27.7889207 C57.2685999,27.7889207 56.3128186,27.3700837 55.713874,26.6506386 L55.713874,31.2580645 L53.7831172,31.2580645 L53.7831172,21.3850716 C53.7831172,20.1309689 53.7610876,19.2582641 53.7087399,18.4637218 L53.6989247,18.3008286 L55.4641319,18.3008286 L55.5411266,19.574855 C56.2430217,18.6062534 57.2960824,18.0967742 58.6106634,18.0967742 Z M70.5928294,20.6077252 C72.7705526,21.5203623 73.6586022,22.6213697 73.6586022,24.406964 C73.6586022,26.138707 72.5508502,28.1612903 69.4271746,28.1612903 C68.3331797,28.1612903 67.0418634,27.809186 66.3556526,27.3227805 L66.266129,27.2597723 L66.7539916,25.6119676 L66.9114792,25.719234 C67.6484063,26.220683 68.6033932,26.507817 69.5310713,26.507817 C70.9556464,26.507817 71.8412319,25.7530273 71.8412319,24.5362506 C71.8412319,23.4611877 71.267131,22.8341585 69.7246969,22.2219547 C67.5484109,21.3819188 66.5346998,20.2096184 66.5346998,18.5323807 C66.5346998,16.4528938 68.1535166,15 70.4712744,15 C71.9457446,15 72.8134665,15.441057 73.1179699,15.6305175 L73.2194026,15.6935257 L72.7064899,17.3040488 L72.5524929,17.203105 C72.3496275,17.0692399 71.5964793,16.6342875 70.4189154,16.6342875 C68.991671,16.6342875 68.353302,17.4950355 68.353302,18.3483707 C68.353302,19.3617336 68.8966035,19.9102752 70.5928294,20.6077252 Z M76.6845571,16.5483871 L76.6845571,18.7396117 L78.8333333,18.7396117 L78.8333333,20.2775343 L76.6845571,20.2775343 L76.6845571,24.9332615 C76.6845571,26.0409398 76.9793649,26.5127085 77.6695974,26.5127085 C78.0416789,26.5127085 78.2728968,26.4840111 78.4980776,26.4092238 L78.6689252,26.3526985 L78.7542484,27.8934474 L78.6544363,27.9314933 C78.4292555,28.0175856 77.9509224,28.1612903 77.2775936,28.1612903 C76.5642192,28.1612903 75.9522668,27.9017088 75.554226,27.4303749 C75.1390804,26.9257779 74.9374439,26.1276843 74.9374439,24.9886998 L74.9374439,20.2775343 L73.6586022,20.2775343 L73.6586022,18.7396117 L74.9374439,18.7396117 L74.9374439,17.141033 L76.6845571,16.5483871 Z M83.2778015,19.6855254 C81.5284219,19.6855254 80.7450729,21.4252398 80.7450729,23.1490394 C80.7450729,25.1327049 81.7874704,26.5725391 83.2234677,26.5725391 L83.2418642,26.5725391 C84.6983971,26.5725391 85.7566242,25.108378 85.7566242,23.0910641 C85.7566242,21.4504761 84.9811899,19.6855254 83.2778015,19.6855254 Z M83.3325632,18.0967742 C84.6085537,18.0967742 85.7035738,18.5730813 86.4978323,19.4731766 C87.2873848,20.3694069 87.7043011,21.6000752 87.7043011,23.0328614 C87.7043011,26.5566243 85.3726505,28.1612903 83.2050712,28.1612903 L83.1875303,28.1612903 C80.6235703,28.1612903 78.8333333,26.1237419 78.8333333,23.205878 C78.8333333,20.1984365 80.683252,18.0967742 83.3325632,18.0967742 Z M93.6182796,18.1848798 L93.6182796,19.9562107 L93.4276381,19.9352025 C93.275447,19.9193392 93.1319123,19.9034759 92.9495246,19.9034759 C92.0118183,19.9034759 91.2756242,20.654196 91.0747159,21.8156471 C91.0425061,22.0390196 91.025596,22.287902 91.025596,22.5511471 L91.025596,27.3870968 L89.2437929,27.3870968 L89.2603004,21.1884035 C89.2603004,20.0503187 89.2405719,19.2072055 89.1930626,18.4560566 L89.1827957,18.2965661 L90.7818085,18.2965661 L90.8341493,19.6243675 C91.2995802,18.681144 92.1360271,18.0967742 93.0682981,18.0967742 C93.2263272,18.0967742 93.3543609,18.1143524 93.5113835,18.15594 L93.6182796,18.1848798 Z M97.8222223,19.6277774 C96.3892371,19.6277774 95.6973093,20.9025525 95.5191872,22.0647872 L99.8884827,22.0647872 C99.8761462,21.6482743 99.7798347,20.7804633 99.2285866,20.1913885 C98.8790516,19.8173908 98.4055021,19.6277774 97.8222223,19.6277774 Z M97.9499162,18.0967742 C100.75507,18.0967742 101.75,20.5483346 101.75,22.6477234 C101.75,23.0076251 101.731387,23.2831784 101.692646,23.4877972 L101.667756,23.6162523 L95.4841255,23.5966999 C95.6016471,26.2260513 97.5211677,26.5145638 98.3535588,26.5145638 C99.5376491,26.5145638 100.231741,26.2867549 100.753771,26.0637204 L100.913497,25.9959688 L101.281645,27.4953698 L101.166287,27.5501622 C100.579112,27.8286711 99.5757409,28.1612903 98.1332327,28.1612903 C95.3904111,28.1612903 93.6182796,26.2537885 93.6182796,23.3022762 C93.6182796,20.2373141 95.3997176,18.0967742 97.9499162,18.0967742 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                                            <text font-family="OpenSans-Regular, Open Sans" font-size="7" font-weight="normal" line-spacing="8" fill="#FFFFFF">
+                                                <tspan x="33" y="12">скачать в</tspan>
+                                            </text>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-payment">
+                    <h4 class="main-footer-title">
+                        Оплата
+                    </h4>
+                    <div class="footer-payment__text">
+                        <svg width="64px" height="12px" viewBox="0 0 64 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+                            <title>Group 19</title>
+                            <desc>Created with Sketch.</desc>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-455.000000, -981.000000)">
+                                    <g id="Group-19" transform="translate(455.000000, 981.000000)">
+                                        <g id="Group-18">
+                                            <g id="Group-14">
+                                                <g id="Group-27">
+                                                    <ellipse id="Oval-Copy-3" fill="#E2574C" cx="6.15384615" cy="6" rx="6.15384615" ry="6"></ellipse>
+                                                    <ellipse id="Oval-Copy-4" fill="#F4B459" cx="13.8461538" cy="6" rx="6.15384615" ry="6"></ellipse>
+                                                    <path d="M12.3076923,5.99931908 C12.3076923,7.89410751 11.4068654,9.58344603 10,10.6830368 C8.59313464,9.58344603 7.69230769,7.89410751 7.69230769,5.99931908 C7.69230769,4.10453064 8.59313464,2.41519212 10,1.31560135 C11.4068654,2.41519212 12.3076923,4.10453064 12.3076923,5.99931908 Z" id="Path" fill="#FF5F00"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        <g id="visa-pay-logo-2" transform="translate(27.000000, 0.000000)">
+                                            <g id="visa-pay-logo">
+                                                <path d="M14.7637708,0.59925 L17.7623125,0.59925 L15.886875,11.29875 L12.889875,11.29875 L14.7637708,0.59925 Z M10.3769583,0.61125 L13.5520208,0.609 L8.83220833,11.28825 L5.661,11.2935 L2.97695833,2.37075 C4.90635417,3.57225 6.54977083,5.47875 7.12866667,6.80625 L7.441625,7.908 L10.3769583,0.61125 Z M23.8364792,2.6505 C22.6632708,2.6505 22.1190625,3.126 22.1190625,3.57075 C22.1128958,4.07175 22.7542292,4.40175 23.8025625,4.89825 C25.534625,5.6595 26.3339792,6.58725 26.320875,7.803 C26.2992917,10.02525 24.2519583,11.45925 21.1015625,11.45925 C19.758,11.44575 18.4637708,11.1885 17.7623125,10.88925 L18.1839583,8.4945 L18.5701458,8.6655 C19.5545,9.0645 20.1919792,9.22575 21.3921667,9.22575 C22.2531875,9.22575 23.1751042,8.89725 23.1843542,8.181 C23.18975,7.71225 22.7981667,7.3785 21.6303542,6.8535 C20.4926042,6.34125 18.9863958,5.48325 19.0056667,3.9465 C19.0218542,1.86675 21.1092708,0.4155 24.0708125,0.4155 C25.2316875,0.4155 26.1620833,0.648 26.755625,0.86475 L26.3501667,3.18375 L26.0796042,3.06 C25.5276875,2.844 24.8169792,2.6355 23.8364792,2.6505 Z M34.447,0.61125 L36.8720417,11.30475 L34.0916458,11.30475 C34.0916458,11.30475 33.8156875,10.0755 33.7262708,9.702 C33.29075,9.702 30.2328542,9.6975 29.8882917,9.6975 C29.7718958,9.98625 29.2585208,11.30475 29.2585208,11.30475 L26.1112083,11.30475 L30.5612292,1.49925 C30.8772708,0.80175 31.4122292,0.61125 32.1314167,0.61125 L34.447,0.61125 Z M30.7508542,7.5075 L33.2406458,7.5075 C33.1203958,6.97275 32.546125,4.41825 32.546125,4.41825 L32.3441667,3.49575 C32.1892292,3.8985 31.9286875,4.5465 31.944875,4.51725 C31.944875,4.51725 30.9975208,6.89325 30.7508542,7.5075 Z" id="Combined-Shape" fill="#2394BC"></path>
+                                                <path d="M5.99091667,1.377 C5.81670833,0.72525 5.3118125,0.531 4.685125,0.50775 L0.0385416667,0.50775 L0,0.72075 C3.61597917,1.57425 6.00864583,3.63075 7.00147917,6.1035 L5.99091667,1.377 Z" id="Path" fill="#F4B459"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        или по счету
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copirate-text">
+            <div class="footer-inn">
+                <span>© 2013 ИП Вартанян Э.К.</span>    <span>ИНН: 381115999541,</span>    <span>ОГРНИП: 318385000008444</span>
+            </div>
+            <a href="http://test.support-mmit.ru/oferta.pdf" class="footer-link" target="_blank">
+                Публичная оферта
+            </a>
+            <a href="http://test.support-mmit.ru/soglashenie.pdf" target="_blank" class="footer-link">
+                Соглашение об использовании сайта
+            </a>
+            <div class="mmit-link">
+                <a href="http://mmit.ru/" target="_blank" class="foorter-link">Мегамир</a>
+            </div>
+        </div>
+    </div>
+    <div class="callback mfp-hide modal-popup" id="callback-modal">
+        <div id="comp_027ef148d0e364427dc78d51225f3402">
+            <div class="modal-popup__title">
+                Задать вопрос    </div>
+
+            <form action="http://test.support-mmit.ru/service/?archive=Y" method="post" class="callback-form" name="SIMPLE_FORM_3" enctype="multipart/form-data" novalidate="novalidate"><input type="hidden" name="bxajaxid" id="bxajaxid_027ef148d0e364427dc78d51225f3402_8BACKi" value="027ef148d0e364427dc78d51225f3402"><input type="hidden" name="AJAX_CALL" value="Y">
+                <input type="hidden" name="sessid" id="sessid" value="ac102fdc2d4f8db32db8c7c968f8df1c">
+                <input type="hidden" name="WEB_FORM_ID" id="web_form_id" value="3">
+                <input type="hidden" name="web_form_submit" value="отправить">
+                <div class="form-item">
+                    <label for="callback-name" class="form-label form-label_popup-form">Имя</label>
+                    <input required="" type="text" placeholder="Ваше имя" name="form_text_6" id="callback-name">
+                </div>
+                <div class="form-item">
+                    <label for="callback-phone" class="form-label form-label_popup-form">Телефон</label>
+                    <input required="" type="text" class="input-phone" placeholder="Ваш телефон" name="form_text_7" id="callback-phone" maxlength="18">
+                </div>
+                <div class="form-item">
+                    <label for="callback-text" class="form-label form-label_popup-form">Комментарий</label>
+                    <textarea id="callback-text" class="callback__comment" required="" name="form_textarea_8"></textarea>
+                </div>
+                <div class="form-item custom-checkbox">
+                    <input type="checkbox" name="personal_agreement" required="" id="callback-agreement" checked="">
+                    <label class="form-label" for="callback-agreement">
+                        Согласен на обработку персональных данных <a href="http://test.support-mmit.ru/soglashenie.pdf" target="_blank">(соглашение)</a>
+                    </label>
+                </div>
+                <div class="form-item__bottom">
+                    <button type="submit" class="button button-green button-small">
+                        Связаться со мной
+                    </button>
+                </div>
+            </form>
+        </div>    </div>
+</footer>
+<div class="preloder">
+    <svg class="lds-bluecat" width="150" height="150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+        <g transform="rotate(74.7463 50 50)">
+            <animateTransform attributeName="transform" type="rotate" values="360 50 50;0 50 50" keyTimes="0;1" dur="1.3s" repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1" begin="-0.19500000000000003s"></animateTransform>
+            <circle cx="50" cy="50" r="39.891" stroke="#9fe4ff" stroke-width="14.4" fill="none" stroke-dasharray="0 300">
+                <animate attributeName="stroke-dasharray" values="15 300;82.71203987927132 300;15 300" keyTimes="0;0.5;1" dur="1.3s" repeatCount="indefinite" calcMode="linear" keySplines="0 0.4 0.6 1;0.4 0 1 0.6" begin="-0.08970000000000002s"></animate>
+            </circle>
+            <circle cx="50" cy="50" r="39.891" stroke="#dbecf2" stroke-width="7.2" fill="none" stroke-dasharray="0 300">
+                <animate attributeName="stroke-dasharray" values="15 300;82.71203987927132 300;15 300" keyTimes="0;0.5;1" dur="1.3s" repeatCount="indefinite" calcMode="linear" keySplines="0 0.4 0.6 1;0.4 0 1 0.6" begin="-0.08970000000000002s"></animate>
+            </circle>
+            <circle cx="50" cy="50" r="32.771" stroke="#3280d8" stroke-width="1" fill="none" stroke-dasharray="0 300">
+                <animate attributeName="stroke-dasharray" values="15 300;67.94906768152214 300;15 300" keyTimes="0;0.5;1" dur="1.3s" repeatCount="indefinite" calcMode="linear" keySplines="0 0.4 0.6 1;0.4 0 1 0.6" begin="-0.08970000000000002s"></animate>
+            </circle>
+            <circle cx="50" cy="50" r="47.171" stroke="#3280d8" stroke-width="1" fill="none" stroke-dasharray="0 300">
+                <animate attributeName="stroke-dasharray" values="15 300;99.05083495206111 300;15 300" keyTimes="0;0.5;1" dur="1.3s" repeatCount="indefinite" calcMode="linear" keySplines="0 0.4 0.6 1;0.4 0 1 0.6" begin="-0.08970000000000002s"></animate>
+            </circle>
+        </g>
+
+        <g transform="rotate(173.078 50 50)">
+            <animateTransform attributeName="transform" type="rotate" values="360 50 50;0 50 50" keyTimes="0;1" dur="1.3s" repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1"></animateTransform>
+            <path fill="#9fe4ff" stroke="#3280d8" d="M97.2,50.1c0,6.1-1.2,12.2-3.5,17.9l-13.3-5.4c1.6-3.9,2.4-8.2,2.4-12.4"></path>
+            <path fill="#dbecf2" d="M93.5,49.9c0,1.2,0,2.7-0.1,3.9l-0.4,3.6c-0.4,2-2.3,3.3-4.1,2.8l-0.2-0.1c-1.8-0.5-3.1-2.3-2.7-3.9l0.4-3 c0.1-1,0.1-2.3,0.1-3.3"></path>
+            <path fill="#9fe4ff" stroke="#3280d8" d="M85.4,62.7c-0.2,0.7-0.5,1.4-0.8,2.1c-0.3,0.7-0.6,1.4-0.9,2c-0.6,1.1-2,1.4-3.2,0.8c-1.1-0.7-1.7-2-1.2-2.9 c0.3-0.6,0.5-1.2,0.8-1.8c0.2-0.6,0.6-1.2,0.7-1.8"></path>
+            <path fill="#9fe4ff" stroke="#3280d8" d="M94.5,65.8c-0.3,0.9-0.7,1.7-1,2.6c-0.4,0.9-0.7,1.7-1.1,2.5c-0.7,1.4-2.3,1.9-3.4,1.3h0 c-1.1-0.7-1.5-2.2-0.9-3.4c0.4-0.8,0.7-1.5,1-2.3c0.3-0.8,0.7-1.5,0.9-2.3"></path>
+        </g>
+        <g transform="rotate(74.7463 50 50)">
+            <animateTransform attributeName="transform" type="rotate" values="360 50 50;0 50 50" keyTimes="0;1" dur="1.3s" repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1" begin="-0.19500000000000003s"></animateTransform>
+            <path fill="#dbecf2" stroke="#3280d8" d="M86.9,35.3l-6,2.4c-0.4-1.2-1.1-2.4-1.7-3.5c-0.2-0.5,0.3-1.1,0.9-1C82.3,33.8,84.8,34.4,86.9,35.3z"></path>
+            <path fill="#dbecf2" stroke="#3280d8" d="M87.1,35.3l6-2.4c-0.6-1.7-1.5-3.3-2.3-4.9c-0.3-0.7-1.2-0.6-1.4,0.1C88.8,30.6,88.2,33,87.1,35.3z"></path>
+            <path fill="#9fe4ff" stroke="#3280d8" d="M82.8,50.1c0-3.4-0.5-6.8-1.6-10c-0.2-0.8-0.4-1.5-0.3-2.3c0.1-0.8,0.4-1.6,0.7-2.4c0.7-1.5,1.9-3.1,3.7-4l0,0 c1.8-0.9,3.7-1.1,5.6-0.3c0.9,0.4,1.7,1,2.4,1.8c0.7,0.8,1.3,1.7,1.7,2.8c1.5,4.6,2.2,9.5,2.3,14.4"></path>
+            <path fill="#dbecf2" d="M86.3,50.2l0-0.9l-0.1-0.9l-0.1-1.9c0-0.9,0.2-1.7,0.7-2.3c0.5-0.7,1.3-1.2,2.3-1.4l0.3,0 c0.9-0.2,1.9,0,2.6,0.6c0.7,0.5,1.3,1.4,1.4,2.4l0.2,2.2l0.1,1.1l0,1.1"></path>
+            <path fill="#ff2d22" d="M93.2,34.6c0.1,0.4-0.3,0.8-0.9,1c-0.6,0.2-1.2,0.1-1.4-0.2c-0.1-0.3,0.3-0.8,0.9-1 C92.4,34.2,93,34.3,93.2,34.6z"></path>
+            <path fill="#ff2d22" d="M81.9,38.7c0.1,0.3,0.7,0.3,1.3,0.1c0.6-0.2,1-0.6,0.9-0.9c-0.1-0.3-0.7-0.3-1.3-0.1 C82.2,38,81.8,38.4,81.9,38.7z"></path>
+            <path fill="#3280d8" d="M88.5,36.8c0.1,0.3-0.2,0.7-0.6,0.8c-0.5,0.2-0.9,0-1.1-0.3c-0.1-0.3,0.2-0.7,0.6-0.8C87.9,36.3,88.4,36.4,88.5,36.8z"></path>
+            <path stroke="#3280d8" d="M85.9,38.9c0.2,0.6,0.8,0.9,1.4,0.7c0.6-0.2,0.9-0.9,0.6-2.1c0.3,1.2,1,1.7,1.6,1.5c0.6-0.2,0.9-0.8,0.8-1.4"></path>
+            <path fill="#9fe4ff" stroke="#3280d8" d="M86.8,42.3l0.4,2.2c0.1,0.4,0.1,0.7,0.2,1.1l0.1,1.1c0.1,1.2-0.9,2.3-2.2,2.3c-1.3,0-2.5-0.8-2.5-1.9l-0.1-1 c0-0.3-0.1-0.6-0.2-1l-0.3-1.9"></path>
+            <path fill="#9fe4ff" stroke="#3280d8" d="M96.2,40.3l0.5,2.7c0.1,0.5,0.2,0.9,0.2,1.4l0.1,1.4c0.1,1.5-0.9,2.8-2.2,2.9h0c-1.3,0-2.5-1.1-2.6-2.4 L92.1,45c0-0.4-0.1-0.8-0.2-1.2l-0.4-2.5"></path>
+            <path fill="#3280d8" d="M91.1,34.1c0.3,0.7,0,1.4-0.7,1.6c-0.6,0.2-1.3-0.1-1.6-0.7c-0.2-0.6,0-1.4,0.7-1.6C90.1,33.1,90.8,33.5,91.1,34.1z"></path>
+            <path fill="#3280d8" d="M85.5,36.3c0.2,0.6-0.1,1.2-0.7,1.5c-0.6,0.2-1.3,0-1.5-0.6C83,36.7,83.4,36,84,35.8C84.6,35.5,85.3,35.7,85.5,36.3z"></path>
+
+        </g></svg>
+</div>
+<script src="app/js/jquery-3.2.1.min.js"></script>
+<script src="app/js/jquery.validate.min.js"></script>
+<script src="app/js/slick.min.js"></script>
+<script src="app/js/jquery.magnific-popup.js"></script>
+<script src="app/js/musk.js"></script>
+<script src="app/js/jquery.gray.min.js"></script>
+<script src="app/js/jquery.viewportchecker.min.js"></script>
+<script src="app/js/tooltipster.bundle.min.js"></script>
+<script src="app/js/jquery.sticky.js"></script>
+<script src="app/js/jquery.mask.min.js"></script>
+<script src="app/js/select2.min.js"></script>
+<script src="app/js/datepicker.min.js"></script>
+<script src="app/js/jquery.dm-uploader.min.js"></script>
+<script src="app/js/jquery.animateNumber.min.js"></script>
+<script src="app/js/jquery.datetimepicker.full.min.js"></script>
+<script src="app/js/main.js"></script>
+</body>
+</html>
