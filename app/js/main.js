@@ -894,20 +894,52 @@ $(document).ready(function () {
     })();
     (function validationAddTicketForm() {
         $('.form-add').validate({
+            onkeyup: function(element) {
+                this.element(element);
+                showErrorMessage();
+            },
+            onfocusout: function(element) {
+                this.element(element);
+                showErrorMessage();
+            },
+            onclick: function(element) {
+                this.element(element);
+                showErrorMessage();
+            },
             invalidHandler: function(event, validator) {
-                let topic = $('.topic-input');
-                let description = $('.description-input');
-                let privacyPolicy = $('.privacy-input');
-                setTimeout(function () {
-                    if (topic.hasClass('error') && description.hasClass('error')) {
-
-                    }
-                    console.log(topic.hasClass('error'));
-                }, 100);
-            }
+                showErrorMessage();
+            },
         });
     })();
+    
+    function showErrorMessage() {
+        let topic = $('.topic-input');
+        let description = $('.description-input');
+        let privacyPolicy = $('.privacy-input');
 
+        setTimeout(function () {
+            if ($('.required-input.error').length >= 2) {
+                $('.error-text:not(.error-text_1)').hide();
+                $('.error-text_1').show();
+                $('.btn_add-ticket').addClass('btn_add-ticket_not-active');
+            } else if (topic.hasClass('error')) {
+                $('.error-text:not(.error-text_2)').hide();
+                $('.error-text_2').show();
+                $('.btn_add-ticket').addClass('btn_add-ticket_not-active');
+            } else if (description.hasClass('error')) {
+                $('.error-text:not(.error-text_3)').hide();
+                $('.error-text_3').show();
+                $('.btn_add-ticket').addClass('btn_add-ticket_not-active');
+            } else if (privacyPolicy.hasClass('error')) {
+                $('.error-text:not(.error-text_4)').hide();
+                $('.error-text_4').show();
+                $('.btn_add-ticket').addClass('btn_add-ticket_not-active');
+            } else {
+                $('.error-text').hide();
+                $('.btn_add-ticket').removeClass('btn_add-ticket_not-active');
+            }
+        }, 100);
+    }
     function displayDate(currentDate, elem) {
         var date = currentDate;
         var options = {

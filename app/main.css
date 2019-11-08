@@ -6194,3 +6194,19 @@ thead {
 .go-back-link span {
 
 }
+.error-text {
+    display: none;
+    color: #6c7481;
+    font-size: 14px;
+    line-height: 1.43;
+    margin-left: 16px;
+}
+.button-submit-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.add-input-wrapper label.error {
+    display: none !important;
+}
