@@ -897,6 +897,7 @@ $(document).ready(function () {
             onkeyup: function(element) {
                 this.element(element);
                 showErrorMessage();
+                console.log('sd');
             },
             onfocusout: function(element) {
                 this.element(element);
